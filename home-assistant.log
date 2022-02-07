@@ -1212,3 +1212,70 @@ TypeError: not enough arguments for format string
 2022-02-07 22:16:07 DEBUG (SyncWorker_34) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.010835s
 2022-02-07 22:16:07 WARNING (SyncWorker_14) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
 2022-02-07 22:16:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.waze_clontarf is taking over 10 seconds
+2022-02-07 22:16:25 DEBUG (Recorder) [homeassistant.components.recorder] Sending keepalive
+2022-02-07 22:16:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_total is taking over 10 seconds
+2022-02-07 22:16:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_today is taking over 10 seconds
+2022-02-07 22:16:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_total is taking over 10 seconds
+2022-02-07 22:16:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_icu_total is taking over 10 seconds
+2022-02-07 22:16:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_last_update is taking over 10 seconds
+2022-02-07 22:16:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_total is taking over 10 seconds
+2022-02-07 22:16:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_today is taking over 10 seconds
+2022-02-07 22:16:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_change_today is taking over 10 seconds
+2022-02-07 22:16:37 DEBUG (SyncWorker_4) [homeassistant.components.recorder.util] querying 27 rows took 0.005917s
+2022-02-07 22:16:37 DEBUG (SyncWorker_25) [homeassistant.components.recorder.util] querying 34 rows took 0.021454s
+2022-02-07 22:16:37 DEBUG (SyncWorker_25) [homeassistant.components.recorder.util] querying 0 rows took 0.002871s
+2022-02-07 22:16:37 DEBUG (SyncWorker_25) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.003222s
+2022-02-07 22:16:37 DEBUG (SyncWorker_27) [homeassistant.components.recorder.util] querying 52 rows took 0.027216s
+2022-02-07 22:16:37 DEBUG (SyncWorker_4) [homeassistant.components.recorder.util] querying 1 rows took 0.024873s
+2022-02-07 22:16:37 DEBUG (SyncWorker_4) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.025180s
+2022-02-07 22:16:37 DEBUG (SyncWorker_27) [homeassistant.components.recorder.util] querying 1 rows took 0.010551s
+2022-02-07 22:16:37 DEBUG (SyncWorker_27) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.010891s
+2022-02-07 22:16:43 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'dict object' has no attribute 'ow_temperature' when rendering '{{ value_json.ow_temperature }}'
+2022-02-07 22:16:55 DEBUG (Recorder) [homeassistant.components.recorder] Sending keepalive
+2022-02-07 22:16:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_total is taking over 10 seconds
+2022-02-07 22:16:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_today is taking over 10 seconds
+2022-02-07 22:16:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_total is taking over 10 seconds
+2022-02-07 22:16:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_total is taking over 10 seconds
+2022-02-07 22:16:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_vent_total is taking over 10 seconds
+2022-02-07 22:16:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_last_update is taking over 10 seconds
+2022-02-07 22:16:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_total is taking over 10 seconds
+2022-02-07 22:16:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_today is taking over 10 seconds
+2022-02-07 22:16:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_change_today is taking over 10 seconds
+2022-02-07 22:17:07 DEBUG (SyncWorker_27) [homeassistant.components.recorder.util] querying 27 rows took 0.017540s
+2022-02-07 22:17:07 DEBUG (SyncWorker_27) [homeassistant.components.recorder.util] querying 1 rows took 0.002209s
+2022-02-07 22:17:07 DEBUG (SyncWorker_27) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.002646s
+2022-02-07 22:17:07 DEBUG (SyncWorker_9) [homeassistant.components.recorder.util] querying 34 rows took 0.007503s
+2022-02-07 22:17:07 DEBUG (SyncWorker_8) [homeassistant.components.recorder.util] querying 52 rows took 0.026675s
+2022-02-07 22:17:07 DEBUG (SyncWorker_9) [homeassistant.components.recorder.util] querying 0 rows took 0.006663s
+2022-02-07 22:17:07 DEBUG (SyncWorker_9) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.006973s
+2022-02-07 22:17:07 DEBUG (SyncWorker_8) [homeassistant.components.recorder.util] querying 1 rows took 0.003653s
+2022-02-07 22:17:07 DEBUG (SyncWorker_8) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.003964s
+2022-02-07 22:17:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_today is taking over 10 seconds
+2022-02-07 22:17:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_total is taking over 10 seconds
+2022-02-07 22:17:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_icu_total is taking over 10 seconds
+2022-02-07 22:17:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_vent_total is taking over 10 seconds
+2022-02-07 22:17:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_last_update is taking over 10 seconds
+2022-02-07 22:17:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_total is taking over 10 seconds
+2022-02-07 22:17:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_today is taking over 10 seconds
+2022-02-07 22:17:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_change_today is taking over 10 seconds
+2022-02-07 22:17:25 DEBUG (Recorder) [homeassistant.components.recorder] Sending keepalive
+2022-02-07 22:17:37 DEBUG (SyncWorker_36) [homeassistant.components.recorder.util] querying 27 rows took 0.007365s
+2022-02-07 22:17:37 DEBUG (SyncWorker_12) [homeassistant.components.recorder.util] querying 52 rows took 0.015854s
+2022-02-07 22:17:37 DEBUG (SyncWorker_12) [homeassistant.components.recorder.util] querying 1 rows took 0.002725s
+2022-02-07 22:17:37 DEBUG (SyncWorker_12) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.003102s
+2022-02-07 22:17:37 DEBUG (SyncWorker_31) [homeassistant.components.recorder.util] querying 34 rows took 0.017478s
+2022-02-07 22:17:37 DEBUG (SyncWorker_31) [homeassistant.components.recorder.util] querying 0 rows took 0.003085s
+2022-02-07 22:17:37 DEBUG (SyncWorker_31) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.003698s
+2022-02-07 22:17:37 DEBUG (SyncWorker_36) [homeassistant.components.recorder.util] querying 1 rows took 0.030094s
+2022-02-07 22:17:37 DEBUG (SyncWorker_36) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.030493s
+2022-02-07 22:17:43 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'dict object' has no attribute 'ow_temperature' when rendering '{{ value_json.ow_temperature }}'
+2022-02-07 22:17:55 DEBUG (Recorder) [homeassistant.components.recorder] Sending keepalive
+2022-02-07 22:17:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_today is taking over 10 seconds
+2022-02-07 22:17:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_total is taking over 10 seconds
+2022-02-07 22:17:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_icu_total is taking over 10 seconds
+2022-02-07 22:17:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_total is taking over 10 seconds
+2022-02-07 22:17:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_vent_total is taking over 10 seconds
+2022-02-07 22:17:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_last_update is taking over 10 seconds
+2022-02-07 22:17:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_total is taking over 10 seconds
+2022-02-07 22:17:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_today is taking over 10 seconds
+2022-02-07 22:17:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_change_today is taking over 10 seconds
