@@ -1,0 +1,14 @@
+#group:
+  #
+  # group smart power outlets
+  #
+  power:
+    name: All power 
+    entities:
+      - switch.computers
+
+  #master:
+   # name: mbr lights
+   # entities:
+   #   - light.master_1
+   #   - light.master_2

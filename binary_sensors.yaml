@@ -1,0 +1,36 @@
+#binary_sensor:
+#   - platform: ping
+#     host: 192.168.1.173
+#     name: "ping_xbox_one"
+#     count: 1
+#     scan_interval: 5
+#   - platform: ping
+#     host: 192.168.1.169
+#     name: "ping_xbox_one_x"
+#     count: 1
+#     scan_interval: 5
+#   - platform: ping
+#     host: 192.168.1.1
+#     name: "ping_netgear"
+#     count: 1
+#     scan_interval: 5
+#   - platform: command_line
+#     command: 'ping -c 1 192.168.1.126 | grep "1 packets received" | wc -l'
+#     name: "kindle_voyager_online"
+#     payload_on: 1
+#     payload_off: 0
+
+  # - platform: ping
+  #   host: 192.168.1.95
+  #   name: "zigstar_up"
+  #   count: 1
+
+
+  # - platform: remote_rpi_gpio
+  #   host: 192.168.1.2
+  #   ports:
+  #     11: PIR Office
+  #     12: PIR Bedroom
+
+    - platform: car_wash
+      weather: weather.fig_tree_pocket

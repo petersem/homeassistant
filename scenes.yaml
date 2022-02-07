@@ -1,0 +1,290 @@
+- id: '1635488169690'
+  name: TV lights
+  entities:
+    light.kitchen_lights:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 31
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      friendly_name: kitchen_lights
+      supported_features: 59
+      state: 'on'
+  icon: mdi:television-classic
+- id: '1635488277866'
+  name: Normal lights
+  entities:
+    light.kitchen_lights:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 174
+      hs_color:
+      - 44.727
+      - 43.137
+      rgb_color:
+      - 255
+      - 227
+      - 145
+      xy_color:
+      - 0.42
+      - 0.411
+      friendly_name: kitchen_lights
+      supported_features: 59
+      state: 'on'
+  icon: mdi:lamps
+- id: '1639543161057'
+  name: Get jiggy widdit
+  entities:
+    scene.kitchen_ooh_la_la:
+      group_name: Kitchen
+      group_type: room
+      name: Ooh La La
+      speed: 0.5
+      brightness: 29.92
+      is_dynamic: false
+      friendly_name: Kitchen - Ooh La La
+      state: scening
+    script.1639542710722:
+      last_triggered: '2021-12-15T04:57:10.753036+00:00'
+      mode: single
+      current: 0
+      icon: mdi:chair-rolling
+      friendly_name: play living jiggy
+      state: 'off'
+    light.hue_color_lamp_2:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 59
+      hs_color:
+      - 16.471
+      - 100
+      rgb_color:
+      - 255
+      - 70
+      - 0
+      xy_color:
+      - 0.675
+      - 0.322
+      mode: normal
+      dynamics: none
+      friendly_name: Hue color lamp 2
+      supported_features: 32
+      state: 'on'
+    light.hue_color_lamp_3:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 56
+      hs_color:
+      - 16.706
+      - 100
+      rgb_color:
+      - 255
+      - 71
+      - 0
+      xy_color:
+      - 0.6736
+      - 0.3221
+      mode: normal
+      dynamics: none
+      friendly_name: Hue color lamp 3
+      supported_features: 32
+      state: 'on'
+    light.hue_colour_lamp_1:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 59
+      hs_color:
+      - 16.471
+      - 100
+      rgb_color:
+      - 255
+      - 70
+      - 0
+      xy_color:
+      - 0.675
+      - 0.322
+      mode: normal
+      dynamics: none
+      friendly_name: Hue colour lamp 1
+      supported_features: 32
+      state: 'on'
+    switch.sonos_alarm_4:
+      alarm_id: '4'
+      time: 06:45:00
+      duration: 01:00:00
+      recurrence: WEEKDAYS
+      volume: 0.38
+      play_mode: SHUFFLE
+      scheduled_today: true
+      include_linked_zones: true
+      icon: mdi:alarm
+      friendly_name: Living Room Weekdays Alarm 06:45
+      state: 'off'
+    media_player.living_room:
+      source_list:
+      - .NET Rocks!
+      - 612 ABC Brisbane
+      - 70's & 80's
+      - 80's Mix
+      - Al Rock
+      - All Funked Up
+      - CNET 24/7
+      - Coding Blocks | Software and Web Programming / Security / Best P
+      - Concentration Music – Background Music for Coding, Programming, Office Work
+      - Current (Rock) Radio
+      - Dad
+      - Double J
+      - Fullstack of Music for Coding Vol. 1
+      - Fullstack of Music for Coding Vol. 2
+      - Happy Pop
+      - Hardcore
+      - kids
+      - Matt Rock
+      - Morning Motivation
+      - NodeUp
+      - Old School Metal
+      - TechCrunch
+      - The Dev Show
+      - The Nerdist 24/7
+      - This Developer's Life
+      - Thumbprint Radio
+      - Today's Hits Radio
+      - triple j
+      - Triple M Brisbane 104.5 (Top 40/Pop)
+      - Xmas Music
+      volume_level: 0.2
+      is_volume_muted: false
+      media_content_id: x-sonos-spotify:spotify%3atrack%3a5FR54UnizyI8pE5E9Zb0Dt?sid=12&flags=8224&sn=12
+      media_content_type: music
+      media_duration: 324
+      media_position: 1
+      media_position_updated_at: '2021-12-15T04:57:15.312678+00:00'
+      media_title: Pony
+      media_artist: Ginuwine
+      media_album_name: Ginuwine... The Bachelor
+      shuffle: true
+      repeat: 'off'
+      sonos_group:
+      - media_player.living_room
+      - media_player.patio
+      queue_position: 0
+      entity_picture: /api/media_player_proxy/media_player.living_room?token=581577e965d84d828788b96c0d2453338947fd2e86460ee96185282457ab58b9&cache=3665b5b0ba46a684
+      friendly_name: Living Room
+      supported_features: 457279
+      state: playing
+    switch.sonos_living_room_crossfade:
+      icon: mdi:swap-horizontal
+      friendly_name: Living Room Crossfade
+      state: 'off'
+    number.living_room_bass:
+      min: -10
+      max: 10
+      step: 1
+      mode: auto
+      friendly_name: Living Room Bass
+      state: '4'
+    number.living_room_treble:
+      min: -10
+      max: 10
+      step: 1
+      mode: auto
+      friendly_name: Living Room Treble
+      state: '0'
+    media_player.patio:
+      source_list:
+      - .NET Rocks!
+      - 612 ABC Brisbane
+      - 70's & 80's
+      - 80's Mix
+      - Al Rock
+      - All Funked Up
+      - CNET 24/7
+      - Coding Blocks | Software and Web Programming / Security / Best P
+      - Concentration Music – Background Music for Coding, Programming, Office Work
+      - Current (Rock) Radio
+      - Dad
+      - Double J
+      - Fullstack of Music for Coding Vol. 1
+      - Fullstack of Music for Coding Vol. 2
+      - Happy Pop
+      - Hardcore
+      - kids
+      - Matt Rock
+      - Morning Motivation
+      - NodeUp
+      - Old School Metal
+      - TechCrunch
+      - The Dev Show
+      - The Nerdist 24/7
+      - This Developer's Life
+      - Thumbprint Radio
+      - Today's Hits Radio
+      - triple j
+      - Triple M Brisbane 104.5 (Top 40/Pop)
+      - Xmas Music
+      volume_level: 0.2
+      is_volume_muted: false
+      media_content_id: x-sonos-spotify:spotify%3atrack%3a5FR54UnizyI8pE5E9Zb0Dt?sid=12&flags=8224&sn=12
+      media_content_type: music
+      media_duration: 324
+      media_position: 1
+      media_position_updated_at: '2021-12-15T04:57:15.312678+00:00'
+      media_title: Pony
+      media_artist: Ginuwine
+      media_album_name: Ginuwine... The Bachelor
+      shuffle: true
+      repeat: 'off'
+      sonos_group:
+      - media_player.living_room
+      - media_player.patio
+      queue_position: 0
+      entity_picture: /api/media_player_proxy/media_player.patio?token=bebea4b111de15d2d451a6b66c6eb988ddb480c18ef742215805d3a1c367f397&cache=3665b5b0ba46a684
+      friendly_name: Patio
+      supported_features: 457279
+      state: playing
+    switch.sonos_patio_crossfade:
+      icon: mdi:swap-horizontal
+      friendly_name: Patio Crossfade
+      state: 'off'
+    number.patio_bass:
+      min: -10
+      max: 10
+      step: 1
+      mode: auto
+      friendly_name: Patio Bass
+      state: '5'
+    number.patio_treble:
+      min: -10
+      max: 10
+      step: 1
+      mode: auto
+      friendly_name: Patio Treble
+      state: '0'

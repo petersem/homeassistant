@@ -1,0 +1,75 @@
+  - name: Docker
+    containers:
+      - bazarr
+      - bookstack
+      - bookstackdb
+      - calibre
+      - calibre-web
+      - sonarr
+      - radarr
+      - lidarr
+      - readarr
+      - sabnzbd
+      - qbittorrent-secure
+      - qbittorrent-unsecure
+      - plex
+      - jellyfin
+      - tautulli
+      - mealie
+      - proxymanager
+      - proxymanagerdb
+      - portainer
+      - pihole
+      - logz
+      - vpn
+      - authelia
+      - autheliaredis
+      - otmq
+      - esphome
+      - vaultwarden
+      - watchtower
+      - zigbee2mqtt
+      - posterr
+      - homeassistantdb
+    rename:
+      jellyfin: "Jellyfin"
+      tautulli: "Tautulli"
+      meanlie: "Mealie"
+      bazarr: "Bazarr"
+      bookstack: "BookStack"
+      bookstackdb: "BookStack DB"
+      homeassistantdb: "H-A Recorder DB"
+      calibre: "Calibre"
+      calibre-web: "Calibre Web"
+      sonarr: "Sonarr"
+      radarr: "Radarr"
+      lidarr: "Lidarr"
+      readarr: "Readarr"
+      sabnzbd: "Sabnzbd"
+      qbittorrent-secure: "Qbittorrent-S"
+      qbittorrent-unsecure: "Qbittorrent-U"
+      plex: "Plex"
+      proxymanager: "NPM"
+      proxymanager-db: "NPM DB"
+      portainer: "Portainer"
+      logz: "Logz"
+      pihole: "Pi-Hole"
+      vpn: "VPN Client"
+      authelia: "Authelia"
+      autheliaredis: "Authelia Redis"
+      otmq: "MQTT"
+      esphome: "ESPHome"
+      vaultwarden: "Vaultwarden"
+      watchtower: "Watchtower"
+      zigbee2mqtt: "Z2M"
+      posterr: "Posterr"
+    monitored_conditions:
+      - version
+      - containers_running
+      - containers_total
+      - state
+      - status
+      - memory
+
+
+

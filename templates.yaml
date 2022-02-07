@@ -1,0 +1,110 @@
+  #
+  # Greetings sensor
+  #
+  - trigger:
+    - platform: time_pattern
+      hours: "/1"
+      # the /1 signifies to refresh every hour. 
+    - platform: homeassistant
+      event: start
+    sensor:
+      - name: "greetings"
+        state: >
+          {% set morning=(["G'day","Morning", "Good Morning"] | random)%}
+          {% set afternoon=(["Arvo","Good Afternoon","G'day"] | random)%}
+          {% set night=(["Night","Good Night", "Sleep Well"] | random)%}
+          {% if now().hour < 5 %} {{night}} {% elif
+          now().hour < 12 %} {{morning}} {% elif
+          now().hour < 18 %} {{afternoon}} {% else %} {{night}}
+          {% endif %}
+
+  #
+  # Smoking Savings
+  #
+  - trigger:
+      - platform: time_pattern
+        # This will update every night
+        hours: 0
+        minutes: 0
+      - platform: homeassistant
+        event: start
+    sensor:
+      # Keep track how many days have past since a date
+      - name: "mp not smoking days"
+        state: '{{ ( ( as_timestamp(now()) - as_timestamp(strptime("12.12.2016", "%d.%m.%Y")) ) / 86400 ) | round(default=0) }}'
+        unit_of_measurement: "Days"
+      - name: "mp smoking money Saved"
+        state: '{{ ((states("sensor.mp_not_smoking_days") | float ) * 40 ) }}'
+      
+      - name: "mp vaping cost"
+        state: '{{ (( states("sensor.mp_not_smoking_days") | float) * 1) | round(default=0) }}'
+        unit_of_measurement: "AUD"
+
+      - name: "mp money Saved"
+        state: '{{ (states("sensor.mp_smoking_money_saved") | float) - (states("sensor.mp_vaping_cost") | float) }}'
+        unit_of_measurement: "AUD"
+
+  #
+  # People home/away
+  #
+  - sensor:
+     - name: "people home"
+       state: '{{ states.person | selectattr("state", "eq", "home") | list | count }}'
+     - name: "people away"
+       state: '{{ states.person | selectattr("state", "eq", "away") | list | count }}'
+     - name: "people total"
+       state: '{{ states.person | list | count }}'
+
+  #
+  # Moon phases
+  #
+  - sensor:
+      - name: "moon_phases"
+        state: >
+          {{ states("sensor.moon") | replace('_', ' ') | title }}
+        picture: /local/images/moon_phases/{{ states("sensor.moon") }}.png
+        attributes:
+          description: >
+            A moon image sensor
+
+  #
+  # Binary sensor counts
+  #
+  - sensor:
+      - name: "binary sensors count"
+        state: '{{ states.binary_sensor | list | count }}'
+      - name: "binary sensors on"
+        state: '{{ states.binary_sensor | selectattr("state", "eq", "on") | list | count }}'
+      - name: "binary sensors off"
+        state: '{{ states.binary_sensor | selectattr("state", "eq", "off") | list | count }}'
+
+  # #
+  # # Low battery
+  # #
+  # - sensor:
+  #     - name: "battery devices"
+  #       state: > 
+  #         {% set data = namespace(battery_devices=[]) %} 
+  #         {% set ns = namespace(count=0) %}
+  #         {% for s in states.sensor if '_battery' in s.entity_id
+  #           and s.state|float(100) < 101 and s.state != 'unknown' 
+  #           and s.entity_id.endswith('temperature') != true 
+  #           and s.entity_id.endswith('health') != true 
+  #           and s.entity_id.endswith('state') != true 
+  #         %}
+  #           {% set ns.count = ns.count + 1 %}
+  #           {% set data.battery_devices = data.battery_devices + [s]%}
+  #         {% endfor %}
+  #         {% for x in data.battery_devices %}
+  #           {% if (x.state | float | round(-1) | round(0) | string) == "100" %} 
+  #             {% set batt_level = "mdi:battery" %}
+  #           {% elif (x.state | float | round(-1) | round(0) | string) == "0" %}
+  #             {% set batt_level = "mdi:battery-outline" %}
+  #           {% else %}
+  #             {% set batt_level = "mdi:battery-" + (x.state | float | round(-1) | round(0) | string) %}
+  #           {% endif %}
+  #           {{ "<ha-icon icon='" + batt_level + "'></ha-icon>" + x.name + " - " + x.state + " %" }}
+  #         {% endfor %}
+
+
+

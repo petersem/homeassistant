@@ -1,0 +1,415 @@
+2022-02-07 21:55:51 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration iphonedetect which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_3) [homeassistant.loader] We found a custom integration plex_assistant which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_4) [homeassistant.loader] We found a custom integration radarr_upcoming_media which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_1) [homeassistant.loader] We found a custom integration bureau_of_meteorology which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_2) [homeassistant.loader] We found a custom integration plex_recently_added which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_5) [homeassistant.loader] We found a custom integration alexa_media which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_6) [homeassistant.loader] We found a custom integration monitor_docker which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration aarlo which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_7) [homeassistant.loader] We found a custom integration fullykiosk which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_4) [homeassistant.loader] We found a custom integration anniversary which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_8) [homeassistant.loader] We found a custom integration spotcast which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_1) [homeassistant.loader] We found a custom integration scheduler which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_3) [homeassistant.loader] We found a custom integration nodered which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration anniversaries which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_6) [homeassistant.loader] We found a custom integration car_wash which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_2) [homeassistant.loader] We found a custom integration average which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_1) [homeassistant.loader] We found a custom integration trakt which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_10) [homeassistant.loader] We found a custom integration garbage_collection which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_8) [homeassistant.loader] We found a custom integration hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_4) [homeassistant.loader] We found a custom integration multiscrape which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_5) [homeassistant.loader] We found a custom integration config_editor which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_3) [homeassistant.loader] We found a custom integration feedparser which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_11) [homeassistant.loader] We found a custom integration google_home which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:51 WARNING (SyncWorker_9) [homeassistant.loader] We found a custom integration holidays which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-02-07 21:55:52 DEBUG (Recorder) [homeassistant.components.recorder] Connected to recorder database
+2022-02-07 21:56:04 WARNING (MainThread) [homeassistant.components.version] Configuration of the Version platform in YAML is deprecated and will be removed in Home Assistant 2022.4; Your existing configuration has been imported into the UI automatically and can be safely removed from your configuration.yaml file
+2022-02-07 21:56:04 WARNING (MainThread) [homeassistant.components.version] Configuration of the Version platform in YAML is deprecated and will be removed in Home Assistant 2022.4; Your existing configuration has been imported into the UI automatically and can be safely removed from your configuration.yaml file
+2022-02-07 21:56:05 ERROR (MainThread) [homeassistant.components.plex] Plex server (https://192-168-1-135.d731546581bd4b62a415adacb6fec429.plex.direct:32400) could not be reached: [HTTPSConnectionPool(host='192-168-1-135.d731546581bd4b62a415adacb6fec429.plex.direct', port=32400): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0bf1b6abe0>: Failed to establish a new connection: [Errno -3] Try again'))]
+2022-02-07 21:56:05 WARNING (MainThread) [homeassistant.config_entries] Config entry 'https://192-168-1-135.d731546581bd4b62a415adacb6fec429.plex.direct:32400' for plex integration not ready yet: HTTPSConnectionPool(host='192-168-1-135.d731546581bd4b62a415adacb6fec429.plex.direct', port=32400): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0bf1b6abe0>: Failed to establish a new connection: [Errno -3] Try again')); Retrying in background
+2022-02-07 21:56:08 ERROR (MainThread) [frontend.js.latest.202202030] https://home.nesretep.net/lovelace/0:0:0 Uncaught 
+2022-02-07 21:56:08 DEBUG (SyncWorker_0) [homeassistant.components.recorder.util] querying 0 rows took 0.020146s
+2022-02-07 21:56:08 DEBUG (SyncWorker_0) [homeassistant.components.recorder.history] get_significant_states took 0.020747s
+2022-02-07 21:56:08 DEBUG (SyncWorker_0) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.000002s
+2022-02-07 21:56:08 DEBUG (SyncWorker_6) [homeassistant.components.recorder.util] querying 0 rows took 0.041090s
+2022-02-07 21:56:08 DEBUG (SyncWorker_6) [homeassistant.components.recorder.history] get_significant_states took 0.041561s
+2022-02-07 21:56:08 DEBUG (SyncWorker_6) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.000002s
+2022-02-07 21:56:08 DEBUG (SyncWorker_9) [homeassistant.components.recorder.util] querying 0 rows took 0.034880s
+2022-02-07 21:56:08 DEBUG (SyncWorker_9) [homeassistant.components.recorder.history] get_significant_states took 0.035170s
+2022-02-07 21:56:08 DEBUG (SyncWorker_9) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.000002s
+2022-02-07 21:56:08 DEBUG (SyncWorker_8) [homeassistant.components.recorder.util] querying 0 rows took 0.034135s
+2022-02-07 21:56:08 DEBUG (SyncWorker_8) [homeassistant.components.recorder.history] get_significant_states took 0.034439s
+2022-02-07 21:56:08 DEBUG (SyncWorker_8) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.000002s
+2022-02-07 21:56:08 DEBUG (SyncWorker_3) [homeassistant.components.recorder.util] querying 0 rows took 0.031043s
+2022-02-07 21:56:08 DEBUG (SyncWorker_3) [homeassistant.components.recorder.history] get_significant_states took 0.031328s
+2022-02-07 21:56:08 DEBUG (SyncWorker_3) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.000002s
+2022-02-07 21:56:08 DEBUG (SyncWorker_4) [homeassistant.components.recorder.util] querying 0 rows took 0.041076s
+2022-02-07 21:56:08 DEBUG (SyncWorker_4) [homeassistant.components.recorder.history] get_significant_states took 0.041361s
+2022-02-07 21:56:08 DEBUG (SyncWorker_4) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.000002s
+2022-02-07 21:56:09 ERROR (Thread-13) [pychromecast.socket_client] [tcl(192.168.1.225):8009] Failed to connect to service ServiceInfo(type='mdns', data='Percee-TV-56310ebf6af5973d96ee7ee4c8a64861._googlecast._tcp.local.'), retrying in 5.0s
+2022-02-07 21:56:10 WARNING (MainThread) [homeassistant.setup] Setup of automation is taking over 10 seconds.
+2022-02-07 21:56:14 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform mqtt is taking over 10 seconds.
+2022-02-07 21:56:14 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform scrape is taking over 10 seconds.
+2022-02-07 21:56:14 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform scrape is taking over 10 seconds.
+2022-02-07 21:56:14 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform scrape is taking over 10 seconds.
+2022-02-07 21:56:14 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform scrape is taking over 10 seconds.
+2022-02-07 21:56:14 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform scrape is taking over 10 seconds.
+2022-02-07 21:56:14 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform scrape is taking over 10 seconds.
+2022-02-07 21:56:15 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform rest is taking over 10 seconds.
+2022-02-07 21:56:15 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform rest is taking over 10 seconds.
+2022-02-07 21:56:15 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform rest is taking over 10 seconds.
+2022-02-07 21:56:15 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform rest is taking over 10 seconds.
+2022-02-07 21:56:15 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform rest is taking over 10 seconds.
+2022-02-07 21:56:15 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform rest is taking over 10 seconds.
+2022-02-07 21:56:15 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform monitor_docker is taking over 10 seconds.
+2022-02-07 21:56:16 WARNING (MainThread) [alexapy.alexalogin] Domain amazon.com.au does not match reported account domain https://www.amazon.com; functionality is not likely to work, please fix
+2022-02-07 21:56:36 ERROR (MainThread) [homeassistant.components.roku.coordinator] Error fetching roku data: Invalid response from API: Timeout occurred while connecting to device
+2022-02-07 21:56:38 ERROR (MainThread) [homeassistant.components.roku.coordinator] Error fetching roku data: Invalid response from API: Timeout occurred while connecting to device
+2022-02-07 21:56:39 DEBUG (SyncWorker_0) [homeassistant.components.recorder.util] querying 33 rows took 0.020480s
+2022-02-07 21:56:39 DEBUG (SyncWorker_0) [homeassistant.components.recorder.util] querying 0 rows took 0.012538s
+2022-02-07 21:56:39 DEBUG (SyncWorker_0) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.012849s
+2022-02-07 21:56:39 DEBUG (SyncWorker_6) [homeassistant.components.recorder.util] querying 26 rows took 0.013838s
+2022-02-07 21:56:39 DEBUG (SyncWorker_4) [homeassistant.components.recorder.util] querying 11 rows took 0.019706s
+2022-02-07 21:56:39 DEBUG (SyncWorker_4) [homeassistant.components.recorder.util] querying 0 rows took 0.011352s
+2022-02-07 21:56:39 DEBUG (SyncWorker_4) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.011660s
+2022-02-07 21:56:39 DEBUG (SyncWorker_6) [homeassistant.components.recorder.util] querying 1 rows took 0.020079s
+2022-02-07 21:56:39 DEBUG (SyncWorker_6) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.020424s
+2022-02-07 21:56:39 DEBUG (SyncWorker_11) [homeassistant.components.recorder.util] querying 4 rows took 0.007777s
+2022-02-07 21:56:39 DEBUG (SyncWorker_11) [homeassistant.components.recorder.util] querying 0 rows took 0.002754s
+2022-02-07 21:56:39 DEBUG (SyncWorker_11) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.003045s
+2022-02-07 21:56:39 DEBUG (SyncWorker_9) [homeassistant.components.recorder.util] querying 4 rows took 0.041654s
+2022-02-07 21:56:39 DEBUG (SyncWorker_9) [homeassistant.components.recorder.util] querying 0 rows took 0.006999s
+2022-02-07 21:56:39 DEBUG (SyncWorker_9) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.007296s
+2022-02-07 21:56:39 DEBUG (SyncWorker_8) [homeassistant.components.recorder.util] querying 12 rows took 0.018648s
+2022-02-07 21:56:39 DEBUG (SyncWorker_8) [homeassistant.components.recorder.util] querying 0 rows took 0.017614s
+2022-02-07 21:56:39 DEBUG (SyncWorker_8) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.018016s
+2022-02-07 21:56:39 DEBUG (SyncWorker_11) [homeassistant.components.recorder.util] querying 50 rows took 0.071353s
+2022-02-07 21:56:39 DEBUG (SyncWorker_11) [homeassistant.components.recorder.util] querying 1 rows took 0.036399s
+2022-02-07 21:56:39 DEBUG (SyncWorker_11) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.036759s
+2022-02-07 21:56:41 DEBUG (SyncWorker_9) [homeassistant.components.recorder.util] querying 50 rows took 0.012631s
+2022-02-07 21:56:41 DEBUG (SyncWorker_2) [homeassistant.components.recorder.util] querying 26 rows took 0.016440s
+2022-02-07 21:56:41 DEBUG (SyncWorker_9) [homeassistant.components.recorder.util] querying 1 rows took 0.020021s
+2022-02-07 21:56:41 DEBUG (SyncWorker_9) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.020349s
+2022-02-07 21:56:41 DEBUG (SyncWorker_2) [homeassistant.components.recorder.util] querying 1 rows took 0.019162s
+2022-02-07 21:56:41 DEBUG (SyncWorker_2) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.019489s
+2022-02-07 21:56:41 DEBUG (Recorder) [homeassistant.components.recorder] Recorder processing the queue
+2022-02-07 21:56:42 WARNING (SyncWorker_10) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-02-07 21:56:42 DEBUG (SyncWorker_11) [homeassistant.components.recorder.util] querying 50 rows took 0.015837s
+2022-02-07 21:56:42 DEBUG (SyncWorker_11) [homeassistant.components.recorder.util] querying 1 rows took 0.003834s
+2022-02-07 21:56:42 DEBUG (SyncWorker_11) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.004183s
+2022-02-07 21:56:43 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'dict object' has no attribute 'ow_temperature' when rendering '{{ value_json.ow_temperature }}'
+2022-02-07 21:56:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_total is taking over 10 seconds
+2022-02-07 21:56:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_vent_total is taking over 10 seconds
+2022-02-07 21:56:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_last_update is taking over 10 seconds
+2022-02-07 21:56:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_total is taking over 10 seconds
+2022-02-07 21:56:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_today is taking over 10 seconds
+2022-02-07 21:56:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_change_today is taking over 10 seconds
+2022-02-07 21:57:02 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:10
+2022-02-07 21:57:03 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.android_tv_192_168_1_225 is taking over 10 seconds
+2022-02-07 21:57:07 DEBUG (SyncWorker_6) [homeassistant.components.recorder.util] querying 27 rows took 0.005933s
+2022-02-07 21:57:07 DEBUG (SyncWorker_6) [homeassistant.components.recorder.util] querying 1 rows took 0.002832s
+2022-02-07 21:57:07 DEBUG (SyncWorker_6) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.003204s
+2022-02-07 21:57:07 DEBUG (SyncWorker_16) [homeassistant.components.recorder.util] querying 34 rows took 0.036845s
+2022-02-07 21:57:08 DEBUG (SyncWorker_16) [homeassistant.components.recorder.util] querying 0 rows took 0.496489s
+2022-02-07 21:57:08 DEBUG (SyncWorker_16) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.496821s
+2022-02-07 21:57:08 DEBUG (SyncWorker_17) [homeassistant.components.recorder.util] querying 52 rows took 0.630337s
+2022-02-07 21:57:08 DEBUG (SyncWorker_17) [homeassistant.components.recorder.util] querying 1 rows took 0.010742s
+2022-02-07 21:57:08 DEBUG (SyncWorker_17) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.011066s
+2022-02-07 21:57:08 DEBUG (SyncWorker_4) [homeassistant.components.recorder.util] querying 2 rows took 0.005878s
+2022-02-07 21:57:08 DEBUG (SyncWorker_4) [homeassistant.components.recorder.history] get_significant_states took 0.006240s
+2022-02-07 21:57:08 DEBUG (SyncWorker_4) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.000005s
+2022-02-07 21:57:08 DEBUG (SyncWorker_12) [homeassistant.components.recorder.util] querying 2 rows took 0.008262s
+2022-02-07 21:57:08 DEBUG (SyncWorker_12) [homeassistant.components.recorder.history] get_significant_states took 0.008567s
+2022-02-07 21:57:08 DEBUG (SyncWorker_12) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.000002s
+2022-02-07 21:57:08 DEBUG (SyncWorker_15) [homeassistant.components.recorder.util] querying 2 rows took 0.010872s
+2022-02-07 21:57:08 DEBUG (SyncWorker_15) [homeassistant.components.recorder.history] get_significant_states took 0.011150s
+2022-02-07 21:57:08 DEBUG (SyncWorker_15) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.000002s
+2022-02-07 21:57:22 DEBUG (Recorder) [homeassistant.components.recorder] Sending keepalive
+2022-02-07 21:57:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_today is taking over 10 seconds
+2022-02-07 21:57:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_total is taking over 10 seconds
+2022-02-07 21:57:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_today is taking over 10 seconds
+2022-02-07 21:57:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_change_today is taking over 10 seconds
+2022-02-07 21:57:37 DEBUG (SyncWorker_15) [homeassistant.components.recorder.util] querying 27 rows took 0.005930s
+2022-02-07 21:57:37 DEBUG (SyncWorker_20) [homeassistant.components.recorder.util] querying 52 rows took 0.007446s
+2022-02-07 21:57:37 DEBUG (SyncWorker_20) [homeassistant.components.recorder.util] querying 1 rows took 0.002362s
+2022-02-07 21:57:37 DEBUG (SyncWorker_20) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.002742s
+2022-02-07 21:57:37 DEBUG (SyncWorker_15) [homeassistant.components.recorder.util] querying 1 rows took 0.006246s
+2022-02-07 21:57:37 DEBUG (SyncWorker_15) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.006585s
+2022-02-07 21:57:37 DEBUG (SyncWorker_17) [homeassistant.components.recorder.util] querying 34 rows took 0.015508s
+2022-02-07 21:57:37 DEBUG (SyncWorker_17) [homeassistant.components.recorder.util] querying 0 rows took 0.004091s
+2022-02-07 21:57:37 DEBUG (SyncWorker_17) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.004386s
+2022-02-07 21:57:43 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'dict object' has no attribute 'ow_temperature' when rendering '{{ value_json.ow_temperature }}'
+2022-02-07 21:57:52 DEBUG (Recorder) [homeassistant.components.recorder] Sending keepalive
+2022-02-07 21:57:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_total is taking over 10 seconds
+2022-02-07 21:57:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_today is taking over 10 seconds
+2022-02-07 21:57:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_total is taking over 10 seconds
+2022-02-07 21:57:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_icu_total is taking over 10 seconds
+2022-02-07 21:57:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_total is taking over 10 seconds
+2022-02-07 21:57:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_vent_total is taking over 10 seconds
+2022-02-07 21:57:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_last_update is taking over 10 seconds
+2022-02-07 21:57:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_total is taking over 10 seconds
+2022-02-07 21:57:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_today is taking over 10 seconds
+2022-02-07 21:57:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_change_today is taking over 10 seconds
+2022-02-07 21:58:08 DEBUG (SyncWorker_20) [homeassistant.components.recorder.util] querying 34 rows took 0.013103s
+2022-02-07 21:58:08 DEBUG (SyncWorker_20) [homeassistant.components.recorder.util] querying 0 rows took 0.003726s
+2022-02-07 21:58:08 DEBUG (SyncWorker_20) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.004040s
+2022-02-07 21:58:08 DEBUG (SyncWorker_10) [homeassistant.components.recorder.util] querying 27 rows took 0.010296s
+2022-02-07 21:58:08 DEBUG (SyncWorker_18) [homeassistant.components.recorder.util] querying 52 rows took 0.011177s
+2022-02-07 21:58:08 DEBUG (SyncWorker_10) [homeassistant.components.recorder.util] querying 1 rows took 0.004880s
+2022-02-07 21:58:08 DEBUG (SyncWorker_10) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.005194s
+2022-02-07 21:58:08 DEBUG (SyncWorker_18) [homeassistant.components.recorder.util] querying 1 rows took 0.003705s
+2022-02-07 21:58:08 DEBUG (SyncWorker_18) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.004002s
+2022-02-07 21:58:24 DEBUG (Recorder) [homeassistant.components.recorder] Sending keepalive
+2022-02-07 21:58:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_total is taking over 10 seconds
+2022-02-07 21:58:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_icu_total is taking over 10 seconds
+2022-02-07 21:58:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_total is taking over 10 seconds
+2022-02-07 21:58:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_vent_total is taking over 10 seconds
+2022-02-07 21:58:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_last_update is taking over 10 seconds
+2022-02-07 21:58:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_total is taking over 10 seconds
+2022-02-07 21:58:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_today is taking over 10 seconds
+2022-02-07 21:58:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_change_today is taking over 10 seconds
+2022-02-07 21:58:37 DEBUG (SyncWorker_21) [homeassistant.components.recorder.util] querying 27 rows took 0.003883s
+2022-02-07 21:58:37 DEBUG (SyncWorker_4) [homeassistant.components.recorder.util] querying 52 rows took 0.006129s
+2022-02-07 21:58:37 DEBUG (SyncWorker_21) [homeassistant.components.recorder.util] querying 1 rows took 0.004143s
+2022-02-07 21:58:37 DEBUG (SyncWorker_21) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.004461s
+2022-02-07 21:58:37 DEBUG (SyncWorker_4) [homeassistant.components.recorder.util] querying 1 rows took 0.002837s
+2022-02-07 21:58:37 DEBUG (SyncWorker_4) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.003140s
+2022-02-07 21:58:37 DEBUG (SyncWorker_3) [homeassistant.components.recorder.util] querying 34 rows took 0.026662s
+2022-02-07 21:58:37 DEBUG (SyncWorker_3) [homeassistant.components.recorder.util] querying 0 rows took 0.003417s
+2022-02-07 21:58:37 DEBUG (SyncWorker_3) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.003705s
+2022-02-07 21:58:43 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'dict object' has no attribute 'ow_temperature' when rendering '{{ value_json.ow_temperature }}'
+2022-02-07 21:58:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_total is taking over 10 seconds
+2022-02-07 21:58:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_total is taking over 10 seconds
+2022-02-07 21:58:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_icu_total is taking over 10 seconds
+2022-02-07 21:58:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_total is taking over 10 seconds
+2022-02-07 21:58:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_vent_total is taking over 10 seconds
+2022-02-07 21:58:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_last_update is taking over 10 seconds
+2022-02-07 21:58:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_total is taking over 10 seconds
+2022-02-07 21:58:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_today is taking over 10 seconds
+2022-02-07 21:58:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_change_today is taking over 10 seconds
+2022-02-07 21:58:56 DEBUG (Recorder) [homeassistant.components.recorder] Sending keepalive
+2022-02-07 21:59:07 DEBUG (SyncWorker_8) [homeassistant.components.recorder.util] querying 52 rows took 0.007392s
+2022-02-07 21:59:07 DEBUG (SyncWorker_11) [homeassistant.components.recorder.util] querying 34 rows took 0.028636s
+2022-02-07 21:59:07 DEBUG (SyncWorker_11) [homeassistant.components.recorder.util] querying 0 rows took 0.004408s
+2022-02-07 21:59:07 DEBUG (SyncWorker_11) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.004744s
+2022-02-07 21:59:07 DEBUG (SyncWorker_8) [homeassistant.components.recorder.util] querying 1 rows took 0.016510s
+2022-02-07 21:59:07 DEBUG (SyncWorker_8) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.016881s
+2022-02-07 21:59:07 DEBUG (SyncWorker_18) [homeassistant.components.recorder.util] querying 27 rows took 0.037725s
+2022-02-07 21:59:07 DEBUG (SyncWorker_18) [homeassistant.components.recorder.util] querying 1 rows took 0.013040s
+2022-02-07 21:59:07 DEBUG (SyncWorker_18) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.013455s
+2022-02-07 21:59:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_total is taking over 10 seconds
+2022-02-07 21:59:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_total is taking over 10 seconds
+2022-02-07 21:59:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_icu_total is taking over 10 seconds
+2022-02-07 21:59:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_total is taking over 10 seconds
+2022-02-07 21:59:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_vent_total is taking over 10 seconds
+2022-02-07 21:59:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_last_update is taking over 10 seconds
+2022-02-07 21:59:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_total is taking over 10 seconds
+2022-02-07 21:59:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_today is taking over 10 seconds
+2022-02-07 21:59:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_change_today is taking over 10 seconds
+2022-02-07 21:59:26 DEBUG (Recorder) [homeassistant.components.recorder] Sending keepalive
+2022-02-07 21:59:37 DEBUG (SyncWorker_22) [homeassistant.components.recorder.util] querying 34 rows took 0.010235s
+2022-02-07 21:59:37 DEBUG (SyncWorker_11) [homeassistant.components.recorder.util] querying 52 rows took 0.005761s
+2022-02-07 21:59:37 DEBUG (SyncWorker_20) [homeassistant.components.recorder.util] querying 27 rows took 0.009441s
+2022-02-07 21:59:37 DEBUG (SyncWorker_22) [homeassistant.components.recorder.util] querying 0 rows took 0.010203s
+2022-02-07 21:59:37 DEBUG (SyncWorker_22) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.010622s
+2022-02-07 21:59:37 DEBUG (SyncWorker_20) [homeassistant.components.recorder.util] querying 1 rows took 0.005994s
+2022-02-07 21:59:37 DEBUG (SyncWorker_20) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.006392s
+2022-02-07 21:59:37 DEBUG (SyncWorker_11) [homeassistant.components.recorder.util] querying 1 rows took 0.025213s
+2022-02-07 21:59:37 DEBUG (SyncWorker_11) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.025849s
+2022-02-07 21:59:43 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'dict object' has no attribute 'ow_temperature' when rendering '{{ value_json.ow_temperature }}'
+2022-02-07 21:59:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_total is taking over 10 seconds
+2022-02-07 21:59:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_total is taking over 10 seconds
+2022-02-07 21:59:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_vent_total is taking over 10 seconds
+2022-02-07 21:59:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_last_update is taking over 10 seconds
+2022-02-07 21:59:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_total is taking over 10 seconds
+2022-02-07 21:59:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_today is taking over 10 seconds
+2022-02-07 21:59:58 DEBUG (Recorder) [homeassistant.components.recorder] Sending keepalive
+2022-02-07 22:00:07 DEBUG (SyncWorker_0) [homeassistant.components.recorder.util] querying 27 rows took 0.007825s
+2022-02-07 22:00:07 DEBUG (SyncWorker_10) [homeassistant.components.recorder.util] querying 34 rows took 0.016804s
+2022-02-07 22:00:07 DEBUG (SyncWorker_14) [homeassistant.components.recorder.util] querying 52 rows took 0.013673s
+2022-02-07 22:00:07 DEBUG (SyncWorker_0) [homeassistant.components.recorder.util] querying 1 rows took 0.009421s
+2022-02-07 22:00:07 DEBUG (SyncWorker_0) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.009814s
+2022-02-07 22:00:07 DEBUG (SyncWorker_14) [homeassistant.components.recorder.util] querying 1 rows took 0.006470s
+2022-02-07 22:00:07 DEBUG (SyncWorker_14) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.006822s
+2022-02-07 22:00:07 DEBUG (SyncWorker_10) [homeassistant.components.recorder.util] querying 0 rows took 0.014883s
+2022-02-07 22:00:07 DEBUG (SyncWorker_10) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.015198s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.statistics] Compiling statistics for 2022-02-07 11:55:00+00:00-2022-02-07 12:00:00+00:00
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 67 rows took 0.016742s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 4 rows took 0.016145s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.history] get_significant_states took 0.016523s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 4 rows took 0.013820s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.history] getting 4 first datapoints took 0.024408s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 101 rows took 0.018236s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.history] get_significant_states took 0.018584s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 63 rows took 0.025788s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.history] getting 63 first datapoints took 0.031618s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004054s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.025063s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.002438s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.002269s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003909s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.002163s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.002096s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.001802s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.statistics] Statistics for sensor during 2022-02-07 11:55:00+00:00-2022-02-07 12:00:00+00:00: [{'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.average_weekly_temperature', 'unit_of_measurement': '°C'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 22.37, 'min': 22.37, 'mean': 22.37}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.hl_4150cdn_page_counter', 'unit_of_measurement': 'p'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 6237.0, 'min': 6237.0, 'mean': 6237.000000000001}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.hl_4150cdn_b_w_counter', 'unit_of_measurement': 'p'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 1779.0, 'min': 1779.0, 'mean': 1779.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.hl_4150cdn_color_counter', 'unit_of_measurement': 'p'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 4458.0, 'min': 4458.0, 'mean': 4458.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.hl_4150cdn_drum_remaining_life', 'unit_of_measurement': '%'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 76.0, 'min': 76.0, 'mean': 76.00000000000001}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.hl_4150cdn_belt_unit_remaining_life', 'unit_of_measurement': '%'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 76.0, 'min': 76.0, 'mean': 76.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.hl_4150cdn_fuser_remaining_life', 'unit_of_measurement': '%'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 94.0, 'min': 94.0, 'mean': 94.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.hl_4150cdn_laser_remaining_life', 'unit_of_measurement': '%'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 94.0, 'min': 94.0, 'mean': 94.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.hl_4150cdn_pf_kit_1_remaining_life', 'unit_of_measurement': '%'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 95.0, 'min': 95.0, 'mean': 95.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.hl_4150cdn_pf_kit_mp_remaining_life', 'unit_of_measurement': '%'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 100.0, 'min': 100.0, 'mean': 100.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.hl_4150cdn_black_toner_remaining', 'unit_of_measurement': '%'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 67.0, 'min': 67.0, 'mean': 67.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.hl_4150cdn_cyan_toner_remaining', 'unit_of_measurement': '%'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 90.0, 'min': 90.0, 'mean': 90.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.hl_4150cdn_magenta_toner_remaining', 'unit_of_measurement': '%'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 27.0, 'min': 27.0, 'mean': 27.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.hl_4150cdn_yellow_toner_remaining', 'unit_of_measurement': '%'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 69.0, 'min': 69.0, 'mean': 69.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.petersem_posterr_watchers', 'unit_of_measurement': 'Watchers'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 6.0, 'min': 6.0, 'mean': 6.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.petersem_dockerholics_watchers', 'unit_of_measurement': 'Watchers'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 13.0, 'min': 13.0, 'mean': 13.000000000000002}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.petersem_posterr_forks', 'unit_of_measurement': 'Forks'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 3.0, 'min': 3.0, 'mean': 3.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.petersem_dockerholics_forks', 'unit_of_measurement': 'Forks'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 10.0, 'min': 10.0, 'mean': 10.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.petersem_posterr_pull_requests', 'unit_of_measurement': 'Pull Requests'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 17.0, 'min': 17.0, 'mean': 17.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.petersem_dockerholics_pull_requests', 'unit_of_measurement': 'Pull Requests'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 0.0, 'min': 0.0, 'mean': 0.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.speedtest_ping', 'unit_of_measurement': 'ms'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 34.0, 'min': 20.0, 'mean': 25.209562906666665}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.speedtest_download', 'unit_of_measurement': 'Mbit/s'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 23.31, 'min': 20.62, 'mean': 22.0246762268}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.speedtest_upload', 'unit_of_measurement': 'Mbit/s'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 8.57, 'min': 7.86, 'mean': 8.280948078733335}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.oneplus_a5000_bluetooth_connection', 'unit_of_measurement': 'connection(s)'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 0.0, 'min': 0.0, 'mean': 0.0}}, {'meta': {'has_mean': False, 'has_sum': True, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.oneplus_a5000_steps_sensor', 'unit_of_measurement': 'steps'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'sum': 67.0, 'state': 38.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.oneplus_a5000_internal_storage', 'unit_of_measurement': '%'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 17.0, 'min': 17.0, 'mean': 17.0}}, {'meta': {'has_mean': False, 'has_sum': True, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.nbn_data_used', 'unit_of_measurement': 'MB'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'sum': 35420.0, 'state': 14501.0}}, {'meta': {'has_mean': False, 'has_sum': True, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.nbn_downloaded', 'unit_of_measurement': 'MB'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'sum': 25740.0, 'state': 11160.0}}, {'meta': {'has_mean': False, 'has_sum': True, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.nbn_uploaded', 'unit_of_measurement': 'MB'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'sum': 9680.0, 'state': 3341.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.outside_temperature', 'unit_of_measurement': '°C'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 24.0, 'min': 23.8, 'mean': 23.952628536000002}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.outside_pressure', 'unit_of_measurement': 'Pa'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 101150.0, 'min': 101140.0, 'mean': 101147.92040473333}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.centaurus_cpu_utilization_user', 'unit_of_measurement': '%'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 38.0, 'min': 32.0, 'mean': 36.65099484}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.centaurus_cpu_utilization_total', 'unit_of_measurement': '%'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 57.0, 'min': 54.0, 'mean': 54.674511450000004}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.centaurus_memory_usage_real', 'unit_of_measurement': '%'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 63.0, 'min': 63.0, 'mean': 63.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.centaurus_memory_available_swap', 'unit_of_measurement': 'MB'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 0.3, 'min': 0.1, 'mean': 0.14497054466666667}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.centaurus_memory_available_real', 'unit_of_measurement': 'MB'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 511.3, 'min': 366.0, 'mean': 478.62856898433336}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.centaurus_memory_total_swap', 'unit_of_measurement': 'MB'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 2047.9, 'min': 2047.9, 'mean': 2047.9}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.centaurus_memory_total_real', 'unit_of_measurement': 'MB'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 11822.2, 'min': 11822.2, 'mean': 11822.2}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.centaurus_upload_throughput', 'unit_of_measurement': 'kB/s'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 43.1, 'min': 22.4, 'mean': 27.054654922999998}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.centaurus_download_throughput', 'unit_of_measurement': 'kB/s'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 32.3, 'min': 25.4, 'mean': 26.951568384999998}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.centaurus_used_space', 'unit_of_measurement': 'TB'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 12.97, 'min': 12.97, 'mean': 12.97}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.centaurus_temperature', 'unit_of_measurement': '°C'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 33.0, 'min': 33.0, 'mean': 33.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.centaurus_temperature_2', 'unit_of_measurement': '°C'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 39.0, 'min': 39.0, 'mean': 39.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.centaurus_temperature_3', 'unit_of_measurement': '°C'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 33.0, 'min': 33.0, 'mean': 33.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.centaurus_temperature_4', 'unit_of_measurement': '°C'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 32.0, 'min': 32.0, 'mean': 32.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.centaurus_temperature_5', 'unit_of_measurement': '°C'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 27.0, 'min': 27.0, 'mean': 27.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.centaurus_temperature_6', 'unit_of_measurement': '°C'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 40.0, 'min': 40.0, 'mean': 40.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.petersem_posterr_stars', 'unit_of_measurement': 'Stars'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 93.0, 'min': 93.0, 'mean': 93.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.petersem_dockerholics_stars', 'unit_of_measurement': 'Stars'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 159.0, 'min': 159.0, 'mean': 159.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.petersem_dockerholics_issues', 'unit_of_measurement': 'Issues'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 0.0, 'min': 0.0, 'mean': 0.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.waqi_cannon_hill', 'unit_of_measurement': 'AQI'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 22.0, 'min': 22.0, 'mean': 22.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.lightmood_linkquality', 'unit_of_measurement': 'lqi'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 132.0, 'min': 132.0, 'mean': 132.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.lighthue_color_lamp_2_linkquality', 'unit_of_measurement': 'lqi'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 75.0, 'min': 75.0, 'mean': 75.00000000000001}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.lightmaster_1_linkquality', 'unit_of_measurement': 'lqi'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 69.0, 'min': 69.0, 'mean': 69.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.lightmaster_2_linkquality', 'unit_of_measurement': 'lqi'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 30.0, 'min': 30.0, 'mean': 30.000000000000004}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.lighthue_color_lamp_1_linkquality', 'unit_of_measurement': 'lqi'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 45.0, 'min': 45.0, 'mean': 44.999999999999986}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.lighthue_color_lamp_3_linkquality', 'unit_of_measurement': 'lqi'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 54.0, 'min': 54.0, 'mean': 54.00000000000001}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.petersem_posterr_issues', 'unit_of_measurement': 'Issues'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 13.0, 'min': 13.0, 'mean': 12.999999999999998}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.ikea_2_button_mbr_battery', 'unit_of_measurement': '%'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 87.0, 'min': 87.0, 'mean': 87.00000000000001}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.mini_switch_1_linkquality', 'unit_of_measurement': 'lqi'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 66.0, 'min': 66.0, 'mean': 66.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.ikea_retro_linkquality', 'unit_of_measurement': 'lqi'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 27.0, 'min': 27.0, 'mean': 27.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.waqi_brisbane_cbd', 'unit_of_measurement': 'AQI'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 20.0, 'min': 20.0, 'mean': 20.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.waqi_rocklea', 'unit_of_measurement': 'AQI'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 4.0, 'min': 4.0, 'mean': 4.0}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.waqi_woolloongabba', 'unit_of_measurement': 'AQI'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 21.0, 'min': 21.0, 'mean': 21.000000000000004}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.ikea_5_button_living_battery', 'unit_of_measurement': '%'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 87.0, 'min': 87.0, 'mean': 86.99999999999999}}, {'meta': {'has_mean': True, 'has_sum': False, 'name': None, 'source': 'recorder', 'statistic_id': 'sensor.ikea_2_button_portable_battery', 'unit_of_measurement': '%'}, 'stat': {'start': datetime.datetime(2022, 2, 7, 11, 55, tzinfo=datetime.timezone.utc), 'max': 87.0, 'min': 87.0, 'mean': 87.00000000000001}}]
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.002146s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.006367s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003951s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003931s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004321s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003927s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004472s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003847s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004375s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003819s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004318s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003921s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004087s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004087s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003809s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004150s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004027s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004195s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004034s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004197s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004751s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004159s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004547s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004075s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004018s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004715s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004282s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004284s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004277s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003885s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004292s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003998s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004358s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003791s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004163s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003914s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003903s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003955s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003877s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004512s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004074s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004498s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004087s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003939s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003945s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003917s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003889s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004291s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003949s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004271s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004739s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004224s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003943s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003931s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003972s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004193s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003856s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004360s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003913s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004200s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003923s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003913s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.004141s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003901s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003976s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 1 rows took 0.003874s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 66 rows took 0.015978s
+2022-02-07 22:00:10 DEBUG (Recorder) [homeassistant.components.recorder.util] querying 66 rows took 0.016179s
+2022-02-07 22:00:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_total is taking over 10 seconds
+2022-02-07 22:00:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_today is taking over 10 seconds
+2022-02-07 22:00:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_total is taking over 10 seconds
+2022-02-07 22:00:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_vent_total is taking over 10 seconds
+2022-02-07 22:00:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_last_update is taking over 10 seconds
+2022-02-07 22:00:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_total is taking over 10 seconds
+2022-02-07 22:00:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_today is taking over 10 seconds
+2022-02-07 22:00:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_change_today is taking over 10 seconds
+2022-02-07 22:00:29 DEBUG (Recorder) [homeassistant.components.recorder] Sending keepalive
+2022-02-07 22:00:37 DEBUG (SyncWorker_14) [homeassistant.components.recorder.util] querying 27 rows took 0.017479s
+2022-02-07 22:00:37 DEBUG (SyncWorker_24) [homeassistant.components.recorder.util] querying 52 rows took 0.020392s
+2022-02-07 22:00:37 DEBUG (SyncWorker_2) [homeassistant.components.recorder.util] querying 34 rows took 0.026312s
+2022-02-07 22:00:37 DEBUG (SyncWorker_14) [homeassistant.components.recorder.util] querying 1 rows took 0.008400s
+2022-02-07 22:00:37 DEBUG (SyncWorker_14) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.008741s
+2022-02-07 22:00:37 DEBUG (SyncWorker_2) [homeassistant.components.recorder.util] querying 0 rows took 0.003921s
+2022-02-07 22:00:37 DEBUG (SyncWorker_2) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.004233s
+2022-02-07 22:00:37 DEBUG (SyncWorker_24) [homeassistant.components.recorder.util] querying 1 rows took 0.007429s
+2022-02-07 22:00:37 DEBUG (SyncWorker_24) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.007798s
+2022-02-07 22:00:43 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'dict object' has no attribute 'ow_temperature' when rendering '{{ value_json.ow_temperature }}'
+2022-02-07 22:00:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_total is taking over 10 seconds
+2022-02-07 22:00:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_icu_total is taking over 10 seconds
+2022-02-07 22:00:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_total is taking over 10 seconds
+2022-02-07 22:00:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_vent_total is taking over 10 seconds
+2022-02-07 22:00:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_last_update is taking over 10 seconds
+2022-02-07 22:00:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_total is taking over 10 seconds
+2022-02-07 22:00:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_today is taking over 10 seconds
+2022-02-07 22:00:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_change_today is taking over 10 seconds
+2022-02-07 22:01:02 DEBUG (Recorder) [homeassistant.components.recorder] Sending keepalive
+2022-02-07 22:01:07 DEBUG (SyncWorker_0) [homeassistant.components.recorder.util] querying 27 rows took 0.005101s
+2022-02-07 22:01:07 DEBUG (SyncWorker_21) [homeassistant.components.recorder.util] querying 34 rows took 0.008552s
+2022-02-07 22:01:07 DEBUG (SyncWorker_5) [homeassistant.components.recorder.util] querying 52 rows took 0.008570s
+2022-02-07 22:01:07 DEBUG (SyncWorker_21) [homeassistant.components.recorder.util] querying 0 rows took 0.003315s
+2022-02-07 22:01:07 DEBUG (SyncWorker_21) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.003641s
+2022-02-07 22:01:07 DEBUG (SyncWorker_0) [homeassistant.components.recorder.util] querying 1 rows took 0.007538s
+2022-02-07 22:01:07 DEBUG (SyncWorker_0) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.008002s
+2022-02-07 22:01:07 DEBUG (SyncWorker_5) [homeassistant.components.recorder.util] querying 1 rows took 0.004321s
+2022-02-07 22:01:07 DEBUG (SyncWorker_5) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.004656s
+2022-02-07 22:01:26 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_total is taking over 10 seconds
+2022-02-07 22:01:26 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_today is taking over 10 seconds
+2022-02-07 22:01:26 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_total is taking over 10 seconds
+2022-02-07 22:01:26 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_total is taking over 10 seconds
+2022-02-07 22:01:26 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_last_update is taking over 10 seconds
+2022-02-07 22:01:26 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_total is taking over 10 seconds
+2022-02-07 22:01:26 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_today is taking over 10 seconds
+2022-02-07 22:01:26 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_change_today is taking over 10 seconds
+2022-02-07 22:01:33 DEBUG (Recorder) [homeassistant.components.recorder] Sending keepalive
+2022-02-07 22:01:37 DEBUG (SyncWorker_16) [homeassistant.components.recorder.util] querying 34 rows took 0.013613s
+2022-02-07 22:01:37 DEBUG (SyncWorker_0) [homeassistant.components.recorder.util] querying 52 rows took 0.013881s
+2022-02-07 22:01:37 DEBUG (SyncWorker_9) [homeassistant.components.recorder.util] querying 27 rows took 0.016585s
+2022-02-07 22:01:37 DEBUG (SyncWorker_16) [homeassistant.components.recorder.util] querying 0 rows took 0.006296s
+2022-02-07 22:01:37 DEBUG (SyncWorker_16) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.006598s
+2022-02-07 22:01:37 DEBUG (SyncWorker_0) [homeassistant.components.recorder.util] querying 1 rows took 0.013396s
+2022-02-07 22:01:37 DEBUG (SyncWorker_0) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.013747s
+2022-02-07 22:01:37 DEBUG (SyncWorker_9) [homeassistant.components.recorder.util] querying 1 rows took 0.016190s
+2022-02-07 22:01:37 DEBUG (SyncWorker_9) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.016568s
+2022-02-07 22:01:43 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'dict object' has no attribute 'ow_temperature' when rendering '{{ value_json.ow_temperature }}'
+2022-02-07 22:01:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_today is taking over 10 seconds
+2022-02-07 22:01:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_total is taking over 10 seconds
+2022-02-07 22:01:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_icu_total is taking over 10 seconds
+2022-02-07 22:01:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_vent_total is taking over 10 seconds
+2022-02-07 22:01:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_last_update is taking over 10 seconds
+2022-02-07 22:01:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_total is taking over 10 seconds
+2022-02-07 22:01:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_today is taking over 10 seconds
+2022-02-07 22:01:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_change_today is taking over 10 seconds
+2022-02-07 22:02:03 DEBUG (Recorder) [homeassistant.components.recorder] Sending keepalive
+2022-02-07 22:02:07 DEBUG (SyncWorker_0) [homeassistant.components.recorder.util] querying 27 rows took 0.006267s
+2022-02-07 22:02:07 DEBUG (SyncWorker_17) [homeassistant.components.recorder.util] querying 52 rows took 0.008103s
+2022-02-07 22:02:07 DEBUG (SyncWorker_12) [homeassistant.components.recorder.util] querying 34 rows took 0.013073s
+2022-02-07 22:02:07 DEBUG (SyncWorker_17) [homeassistant.components.recorder.util] querying 1 rows took 0.006924s
+2022-02-07 22:02:07 DEBUG (SyncWorker_17) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.007262s
+2022-02-07 22:02:07 DEBUG (SyncWorker_12) [homeassistant.components.recorder.util] querying 0 rows took 0.003663s
+2022-02-07 22:02:07 DEBUG (SyncWorker_12) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.006600s
+2022-02-07 22:02:07 DEBUG (SyncWorker_0) [homeassistant.components.recorder.util] querying 1 rows took 0.013289s
+2022-02-07 22:02:07 DEBUG (SyncWorker_0) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.013652s
+2022-02-07 22:02:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_total is taking over 10 seconds
+2022-02-07 22:02:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_deaths_total is taking over 10 seconds
+2022-02-07 22:02:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_icu_total is taking over 10 seconds
+2022-02-07 22:02:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_total is taking over 10 seconds
+2022-02-07 22:02:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_hospitalisations_vent_total is taking over 10 seconds
+2022-02-07 22:02:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_last_update is taking over 10 seconds
+2022-02-07 22:02:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_total is taking over 10 seconds
+2022-02-07 22:02:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_cases_today is taking over 10 seconds
+2022-02-07 22:02:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.qld_covid_active_cases_change_today is taking over 10 seconds
+2022-02-07 22:02:33 DEBUG (Recorder) [homeassistant.components.recorder] Sending keepalive
+2022-02-07 22:02:37 DEBUG (SyncWorker_28) [homeassistant.components.recorder.util] querying 27 rows took 0.003957s
+2022-02-07 22:02:37 DEBUG (SyncWorker_9) [homeassistant.components.recorder.util] querying 34 rows took 0.008981s
+2022-02-07 22:02:37 DEBUG (SyncWorker_9) [homeassistant.components.recorder.util] querying 0 rows took 0.002009s
+2022-02-07 22:02:37 DEBUG (SyncWorker_9) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.002306s
+2022-02-07 22:02:37 DEBUG (SyncWorker_28) [homeassistant.components.recorder.util] querying 1 rows took 0.008997s
+2022-02-07 22:02:37 DEBUG (SyncWorker_28) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.009343s
+2022-02-07 22:02:37 DEBUG (SyncWorker_3) [homeassistant.components.recorder.util] querying 52 rows took 0.014860s
+2022-02-07 22:02:37 DEBUG (SyncWorker_3) [homeassistant.components.recorder.util] querying 1 rows took 0.007432s
+2022-02-07 22:02:37 DEBUG (SyncWorker_3) [homeassistant.components.recorder.history] getting 1 first datapoints took 0.007800s

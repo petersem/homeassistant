@@ -1,0 +1,22 @@
+  sensors:
+    - name: "Schedule Christmas"
+      frequency: annual
+      date: '12/25'
+      icon_normal: mdi:pine-tree
+      verbose_state: true
+      verbose_format: "in {days} days"
+    - name: Schedule Green Waste
+      frequency: 'even-weeks'
+      collection_days: mon
+      icon_normal: mdi:leaf-circle-outline
+      icon_tomorrow: mdi:leaf-circle
+      verbose_state: True
+      verbose_format: "in {days} days"
+    - name: Schedule Recycle Waste
+      frequency: 'odd-weeks'
+      icon_normal: mdi:recycle-variant
+      icon_tomorrow: mdi:recycle
+      collection_days: mon
+      verbose_state: True
+      # verbose_format: "on {date}, in {days} days"
+      verbose_format: "in {days} days"

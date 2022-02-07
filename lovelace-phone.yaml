@@ -1,0 +1,2238 @@
+title: Home
+background: var(--background-image)
+views:
+  - theme: kibibit-dark-cards
+    title: overview
+    icon: mdi:home
+    badges: []
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: custom:stack-in-card
+            theme: kibibit-dark-cards
+            mode: vertical
+            cards:
+              - type: custom:clockwork-card
+                locale: en-AU
+                entity: sensor.date_time_iso
+                other_time:
+                  - America/New_York
+                  - Europe/London
+          - type: weather-forecast
+            entity: weather.fig_tree_pocket
+            show_forecast: false
+            theme: kibibit-dark-cards
+          - type: grid
+            theme: kibibit-dark-cards
+            cards:
+              - type: button
+                tap_action:
+                  action: toggle
+                entity: light.all_lights_2
+                theme: kibibit-dark-cards
+                name: All
+                show_state: false
+                icon: mdi:lightbulb-group
+                show_icon: true
+              - type: button
+                tap_action:
+                  action: toggle
+                theme: kibibit-dark-cards
+                entity: light.bedroom_lights
+                show_state: false
+                icon: mdi:lamps
+                name: MBR
+              - type: button
+                tap_action:
+                  action: toggle
+                theme: kibibit-dark-cards
+                entity: light.kitchen_lights
+                name: Kitch.
+                show_state: false
+                icon: mdi:ceiling-light-multiple
+              - type: button
+                tap_action:
+                  action: toggle
+                theme: kibibit-dark-cards
+                entity: light.mood
+                show_state: false
+                icon: mdi:dome-light
+                name: Mood
+              - type: button
+                tap_action:
+                  action: toggle
+                theme: kibibit-dark-cards
+                entity: light.ikea_retro
+                show_state: false
+                icon: mdi:lightbulb-variant-outline
+                name: Entry
+            columns: 5
+          - type: grid
+            theme: kibibit-dark-cards
+            cards:
+              - type: button
+                tap_action:
+                  action: toggle
+                theme: kibibit-dark-cards
+                entity: group.power
+                name: All
+                show_state: false
+                icon: mdi:power
+              - type: button
+                tap_action:
+                  action: toggle
+                theme: kibibit-dark-cards
+                entity: switch.computers
+                show_state: false
+                name: PC's
+            square: true
+            columns: 5
+          - type: entities
+            entities:
+              - entity: sensor.qld_fuel_u98
+                name: U98
+                icon: mdi:gas-station
+              - entity: sensor.qld_fuel_u95
+                name: U95
+                icon: mdi:gas-station-outline
+              - entity: sensor.qld_fuel_u91
+                name: U91
+                icon: mdi:fuel
+            theme: kibibit-dark-cards
+          - type: custom:stack-in-card
+            mode: horizontal
+            theme: kibibit-dark-cards
+            cards:
+              - type: custom:mushroom-person-card
+                entity: person.matt_petersen
+                use_entity_picture: true
+                vertical: true
+              - type: custom:mushroom-person-card
+                entity: person.laura_petersen
+                use_entity_picture: true
+                vertical: true
+              - type: custom:mushroom-person-card
+                entity: person.dan_petersen
+                use_entity_picture: true
+                vertical: true
+          - type: custom:mini-media-player
+            entity: media_player.living_room
+            hide:
+              power: true
+              icon: true
+              source: false
+              shuffle: true
+            speaker_group:
+              platform: sonos
+              show_group_count: true
+              sync_volume: true
+              entities:
+                - entity_id: media_player.living_room
+                  name: Sonos Living Room
+                - entity_id: media_player.patio
+                  name: Sonos Patio
+                - entity_id: media_player.study_1
+                  name: Sonos Study 1
+                - entity_id: media_player.study_2
+                  name: Sonos
+            group: true
+            volume_stateless: false
+            name: Sonos Upstairs
+            sound_mode: icon
+            artwork: none
+            info: scroll
+          - type: entities
+            entities:
+              - entity: sensor.schedule_green_waste
+                name: Green waste
+              - entity: sensor.schedule_recycle_waste
+                name: Recycle waste
+            theme: kibibit-dark-cards
+          - type: horizontal-stack
+            cards:
+              - type: custom:mini-graph-card
+                name: Down
+                entities:
+                  - sensor.speedtest_download
+                line_color: green
+                line_width: 8
+                font_size: 75
+              - type: custom:mini-graph-card
+                name: Up
+                entities:
+                  - sensor.speedtest_upload
+                line_color: blue
+                line_width: 8
+                font_size: 75
+              - type: custom:mini-graph-card
+                name: Ping
+                entities:
+                  - sensor.speedtest_ping
+                line_color: yellow
+                line_width: 8
+                font_size: 75
+          - type: custom:stack-in-card
+            mode: vertical
+            cards:
+              - type: custom:bar-card
+                name: X-Box Day
+                entities:
+                  - entity: sensor.xbox_dan_time
+                direction: right
+                min: '0'
+                max: '3'
+                unit_of_measurement: h
+                severity:
+                  - from: '3.1'
+                    to: '10'
+                    color: '#EA3F3D'
+                  - from: '1.6'
+                    to: '3'
+                    color: '#FFA632'
+                  - from: '0'
+                    to: '1.5'
+                    color: '#00A250'
+                positions:
+                  icon: 'off'
+                  indicator: 'off'
+              - type: custom:bar-card
+                name: X-Box Week
+                entities:
+                  - entity: sensor.xbox_weekly
+                direction: right
+                min: '0'
+                max: '21'
+                unit_of_measurement: h
+                severity:
+                  - from: '21.1'
+                    to: '50'
+                    color: '#EA3F3D'
+                  - from: '10.6'
+                    to: '21'
+                    color: '#FFA632'
+                  - from: '0'
+                    to: '10.5'
+                    color: '#00A250'
+                positions:
+                  icon: 'off'
+                  indicator: 'off'
+              - type: custom:bar-card
+                name: Kindle Day
+                entities:
+                  - entity: sensor.kindle_use_today
+                direction: right
+                min: '0'
+                max: '2'
+                unit_of_measurement: h
+                severity:
+                  - from: '0'
+                    to: '.99'
+                    color: '#EA3F3D'
+                  - from: '1'
+                    to: '1.9'
+                    color: '#FFA632'
+                  - from: '2'
+                    to: '4'
+                    color: '#00A250'
+                positions:
+                  icon: 'off'
+                  indicator: 'off'
+              - type: custom:bar-card
+                name: Kindle Week
+                entities:
+                  - entity: sensor.kindle_weekly
+                direction: right
+                min: '0'
+                max: '14'
+                unit_of_measurement: h
+                severity:
+                  - from: '0'
+                    to: '6.9'
+                    color: '#EA3F3D'
+                  - from: '7'
+                    to: '13.9'
+                    color: '#FFA632'
+                  - from: '14'
+                    to: '20'
+                    color: '#00A250'
+                positions:
+                  icon: 'off'
+                  indicator: 'off'
+          - type: vertical-stack
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: vertical-stack
+                    cards:
+                      - type: custom:bar-card
+                        name: Storage Used
+                        entities:
+                          - entity: sensor.total_disk_utilisation
+                            direction: up
+                            positions:
+                              name: inside
+                            name: Storage 25 tb
+                        direction: right
+                        min: '0'
+                        max: '25'
+                        unit_of_measurement: tb
+                        severity:
+                          - from: '22'
+                            to: '25'
+                            color: '#EA3F3D'
+                          - from: '12'
+                            to: '21.9'
+                            color: '#FFA632'
+                          - from: '0'
+                            to: '11.0'
+                            color: '#00A250'
+                        positions:
+                          icon: 'off'
+                          name: 'off'
+                          minmax: 'off'
+                          indicator: 'off'
+                        width: 100px
+                        height: 112px
+                  - type: custom:stack-in-card
+                    mode: vertical
+                    cards:
+                      - type: markdown
+                        content: >-
+                          <h3>Pocket Money</h3>  Laura: ${{
+                          states('counter.pocketmoney_laura')
+                          }}</span></br></br> Dan: ${{
+                          states('counter.pocketmoney_dan') }} </br></br>
+          - type: custom:stack-in-card
+            mode: vertical
+            cards:
+              - type: custom:button-card
+                color_type: label-card
+                color: rgb(27, 24, 24)
+                name: Queensland Covid
+                theme: kibibit-dark-cards
+                styles: null
+                card:
+                  - height: 15px
+              - type: custom:mushroom-chips-card
+                chips:
+                  - type: entity
+                    theme: kibibit-dark-cards
+                    entity: sensor.qld_covid_active_cases_total
+                    icon: mdi:virus-outline
+                    icon_color: red
+                  - type: entity
+                    theme: kibibit-dark-cards
+                    entity: sensor.qld_covid_cases_today
+                    icon_color: orange
+                    icon: mdi:account-group-outline
+                  - type: entity
+                    entity: sensor.qld_covid_deaths_today
+                    theme: kibibit-dark-cards
+                    icon: mdi:skull-scan
+                    icon_color: grey
+  - title: Weather
+    path: environment
+    icon: mdi:weather-lightning
+    theme: kibibit-dark-cards
+    badges: []
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: custom:weather-card
+            entity: weather.fig_tree_pocket
+            details: true
+            forecast: true
+            hourly_forecast: false
+            number_of_forecasts: '6'
+          - type: iframe
+            url: >-
+              https://embed.windy.com/embed2.html?lat=-27.635&lon=152.927&detailLat=-26.269&detailLon=152.864&width=650&height=450&zoom=9&level=surface&overlay=radar&product=radar&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1
+            aspect_ratio: 71.5%
+          - type: grid
+            columns: 2
+            cards:
+              - type: custom:tempometer-gauge-card
+                entity: sensor.waqi_rocklea
+                min: 0
+                max: 200
+                title: Air Quality
+                card_style: custom
+                severity:
+                  green: 0
+                  yellow: 51
+                  red: 151
+                icon1: mdi:emoticon-happy
+                icon2: mdi:emoticon-sick
+                icon3: mdi:skull
+              - type: custom:tempometer-gauge-card
+                entity: sensor.outside_temperature
+                min: 0
+                max: 42
+                title: Outside Temperature
+                card_style: thermometer
+                severity:
+                  green: 15
+                  yellow: 24
+                  red: 30
+              - type: custom:tempometer-gauge-card
+                entity: sensor.outside_pressure
+                min: 980
+                max: 1050
+                title: Outside Pressure
+                decimals: 0
+                severity:
+                  green: 1009
+                  yellow: 1000
+                  red: 980
+              - type: history-graph
+                entities:
+                  - entity: sensor.average_weekly_temperature
+                hours_to_show: 24
+                refresh_interval: 0
+              - type: history-graph
+                entities:
+                  - entity: sensor.waqi_rocklea
+                hours_to_show: 168
+                refresh_interval: 0
+              - type: history-graph
+                entities:
+                  - entity: sensor.outside_temperature
+                hours_to_show: 24
+                refresh_interval: 0
+              - type: history-graph
+                entities:
+                  - entity: sensor.outside_pressure
+                hours_to_show: 24
+                refresh_interval: 0
+              - type: markdown
+                content: >
+                  <h4>{{ states('sensor.moon_phases')}}</h4>
+
+                  <img src="/local/images/moon_phases/{{
+                  states("sensor.moon")}}.png" />
+                theme: kibibit-dark-cards
+              - type: custom:sun-card
+  - theme: kibibit-dark-cards
+    path: music
+    icon: mdi:music
+    badges: []
+    cards:
+      - type: custom:mini-media-player
+        entity: media_player.living_room
+        info: scroll
+        hide:
+          power: true
+          icon: true
+          source: true
+          shuffle: false
+        speaker_group:
+          platform: sonos
+          show_group_count: true
+          sync_volume: true
+          expanded: false
+          entities:
+            - entity_id: media_player.living_room
+              name: Sonos Living Room
+            - entity_id: media_player.patio
+              name: Sonos Patio
+            - entity_id: media_player.study_1
+              name: Sonos Study 1
+            - entity_id: media_player.study_2
+              name: Sonos Study 2
+        shortcuts:
+          hide_when_off: true
+          columns: 5
+          buttons:
+            - name: 60-70's
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:7cLrDE8RR1u6Phl30RO0IN
+            - name: 80's
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:6naHkghfeIqkTh7zg59aEU
+            - name: 80's Metal
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:6Y7jX5AA9dvhRMdzdnx5VC
+            - name: 90's
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:1HQrE0CFBCyQOoyCp2g8lg
+            - name: Aussie
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:5vNdRqDDETdxbayVorzcAD
+            - name: Chill
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:37i9dQZF1DX6VdMW310YC7
+            - name: Club
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:6WjvrpaQEI2JiDoTrBLYWa
+            - name: Date
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:37i9dQZF1DXalDDvuKwGpK
+            - name: Dinner
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:3q7KA5dteW52uCWglwne4h
+            - name: Feel Good
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:38pv3X9r6bbvkcAmJWh0cS
+            - name: Funk
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:6YXqIQpb7EZGgYk2z87zjY
+            - name: Jiggy
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:54aeuIjMAejovN8FmBbXvT
+            - name: Matt's Mix
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:5wMwrEfmI4Dg0oF4JF9XfZ
+            - name: Mellow
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:4kv1mHe5iXBko88Jtdeptl
+            - name: Swing
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:4dGhAPTgWk8PefKcVBmQMZ
+            - name: Techno
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:6Y0NhjmJ0l5eU913NrsaOg
+        group: true
+        volume_stateless: false
+        name: Sonos Upstairs
+        artwork: none
+      - type: custom:mini-media-player
+        hide:
+          power: true
+          icon: true
+          source: true
+          shuffle: false
+        speaker_group:
+          platform: sonos
+          show_group_count: true
+          sync_volume: true
+          expanded: false
+          entities:
+            - entity_id: media_player.study_1
+              name: Sonos Study 1
+            - entity_id: media_player.study_2
+              name: Sonos Study 2
+            - entity_id: media_player.living_room
+              name: Sonos Living Room
+            - entity_id: media_player.patio
+              name: Sonos Patio
+        shortcuts:
+          hide_when_off: true
+          columns: 6
+          buttons:
+            - name: 80's Metal
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:6Y7jX5AA9dvhRMdzdnx5VC
+            - name: 90's
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:1HQrE0CFBCyQOoyCp2g8lg
+            - name: Chill
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:37i9dQZF1DX6VdMW310YC7
+            - name: Coding
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:74wxTpeXRUOHlzcrXyy2qs
+            - name: Concentration
+              type: playlist
+              id: >-
+                spotify:user:22em7zdows2nhi77teviu2lmi:playlist:019wePCGS39nIP6UCQk0qt
+        group: true
+        volume_stateless: false
+        name: Sonos Downstairs
+        entity: media_player.study_1
+        artwork: none
+        info: scroll
+      - type: custom:spotify-card
+        spotify_entity: media_player.spotify_matthew_petersen
+        playlist_type: default
+        account: default
+        always_play_random_song: true
+        grid_show_title: true
+        display_style: grid
+        limit: 30
+        name: Mini Speakers
+        grid_covers_per_row: '6'
+  - title: Where is everyone?
+    path: where-is
+    icon: mdi:map-marker-radius
+    theme: kibibit-dark-cards
+    badges: []
+    cards:
+      - type: map
+        entities:
+          - entity: person.matt_petersen
+          - entity: device_tracker.matt_galtaba
+        dark_mode: false
+  - title: Cameras
+    path: cameras
+    icon: mdi:camera
+    theme: kibibit-dark-cards
+    badges: []
+    cards:
+      - type: picture-glance
+        title: Kitchen
+        image: https://demo.home-assistant.io/stub_config/kitchen.png
+        entities:
+          - binary_sensor.updater
+          - binary_sensor.ping_xbox_one
+  - icon: mdi:car
+    theme: kibibit-dark-cards
+    title: car
+    path: car
+    badges: []
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: entities
+            entities:
+              - entity: binary_sensor.car_wash
+                name: Wash car?
+            theme: ios-dark-mode
+          - type: entities
+            entities:
+              - entity: sensor.anniversary_car_insurance
+                name: Car insurance $88
+                icon: mdi:car-traction-control
+              - entity: sensor.anniversary_car_registration
+                name: Car rego
+            theme: ios-dark-mode
+            title: Reminders
+          - type: custom:travel-time-card
+            title: Travel Time
+            columns:
+              - name
+              - duration
+              - distance
+              - route
+            map: google
+            show_header: false
+            entities:
+              - entity: sensor.waze_city
+                name: City
+                icon: mdi:city-variant-outline
+              - entity: sensor.waze_nudgee
+                name: Nudgee
+                icon: mdi:gas-station
+              - entity: sensor.waze_clontarf
+                name: Clontarf
+                icon: mdi:shops
+              - entity: sensor.waze_matt_home
+                icon: mdi:account
+                name: Matt home
+            theme: ios-dark-theme
+          - type: entities
+            entities:
+              - entity: sensor.qld_fuel_u98
+                name: U98
+                icon: mdi:gas-station
+              - entity: sensor.qld_fuel_u95
+                name: U95
+                icon: mdi:gas-station-outline
+              - entity: sensor.qld_fuel_u91
+                name: U91
+                icon: mdi:fuel
+              - entity: sensor.qld_fuel_e10
+                name: E10
+                icon: mdi:gas-station-outline
+              - entity: sensor.qld_fuel_diesel
+                name: Diesel
+                icon: mdi:truck
+              - entity: sensor.qld_fuel_lpg
+                name: LPG
+                icon: mdi:gas-cylinder
+            theme: ios-dark-mode
+          - type: map
+            entities:
+              - entity: device_tracker.matt_galtaba
+            dark_mode: true
+  - title: Device Health
+    path: device-health
+    icon: mdi:bottle-tonic-plus-outline
+    theme: kibibit-dark-cards
+    badges: []
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: custom:stack-in-card
+            mode: vertical
+            cards:
+              - type: grid
+                title: Device Uptime
+                square: false
+                columns: 2
+                cards:
+                  - type: custom:uptime-card
+                    entity: device_tracker.centaurus
+                    ok: home
+                    status_adaptive_color: false
+                    bar: {}
+                    color: {}
+                    init:
+                      animation: raise
+                    title_template: Centaurus
+                    title_adaptive_color: true
+                    show:
+                      average: true
+                      footer: true
+                      status: false
+                      icon: false
+                      header: true
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    alignment:
+                      header: spaced
+                      status: spaced
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    entity: device_tracker.sygnus
+                    ok: home
+                    status_adaptive_color: false
+                    bar: {}
+                    color: {}
+                    init:
+                      animation: raise
+                    title_template: Sygnus
+                    title_adaptive_color: true
+                    show:
+                      average: true
+                      footer: true
+                      status: false
+                      icon: false
+                      header: true
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    alignment:
+                      header: spaced
+                      status: spaced
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    entity: sensor.zigstar_up
+                    ok: Up
+                    status_adaptive_color: false
+                    bar: {}
+                    color: {}
+                    init:
+                      animation: raise
+                    title_template: Zigstar
+                    title_adaptive_color: true
+                    show:
+                      average: true
+                      footer: true
+                      status: false
+                      icon: false
+                      header: true
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    alignment:
+                      header: spaced
+                      status: spaced
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+            square: false
+          - type: custom:auto-entities
+            card:
+              type: entities
+              title: Device Link Quality
+              theme: ios-dark-theme
+            filter:
+              include:
+                - entity_id: sensor.*linkquality
+              exclude:
+                - state: unavailable
+                - state: unknown
+            sort:
+              method: state
+              reverse: false
+              numeric: true
+          - type: custom:auto-entities
+            card:
+              type: custom:battery-state-card
+              title: Battery Levels
+              color_gradient:
+                - '#ff0000'
+                - '#ffff00'
+                - '#00ff00'
+            filter:
+              include:
+                - entity_id: sensor.*_battery
+                - entity_id: sensor.*_battery_level
+              exclude: []
+            sort:
+              method: state
+              reverse: false
+              numeric: true
+          - type: horizontal-stack
+            cards: []
+          - type: custom:auto-entities
+            card:
+              type: entities
+              title: Device Temperatures
+              theme: ios-dark-theme
+            filter:
+              include:
+                - entity_id: sensor.*temp*
+              exclude:
+                - entity_id: sensor.centaurus_temperature_*
+                - entity_id: sensor.zigstar_temp_f
+                - entity_id: sensor.fig_tree_*
+                - entity_id: sensor.*battery*
+                - entity_id: sensor.ow_temperature
+                - entity_id: sensor.*outside*
+                - entity_id: sensor.cpu_temperature
+                - entity_id: sensor.average_week*
+                - state: 'off'
+                - state: unavailable
+                - state: unknown
+            sort:
+              method: state
+              reverse: true
+              numeric: true
+      - type: glance
+        entities:
+          - entity: sensor.hl_4150cdn_status
+            name: Status
+          - entity: sensor.hl_4150cdn_cyan_toner_remaining
+            name: Cyan
+          - entity: sensor.hl_4150cdn_black_toner_remaining
+            name: Black
+          - entity: sensor.hl_4150cdn_magenta_toner_remaining
+            name: Magenta
+          - entity: sensor.hl_4150cdn_yellow_toner_remaining
+            name: Yellow
+        theme: kibibit-dark-cards
+        title: Brother Printer
+      - type: glance
+        title: Pi-Hole
+        entities:
+          - entity: sensor.pi_hole_ads_blocked_today
+            name: Ads Blocked
+          - entity: sensor.pi_hole_domains_blocked
+            name: Domains Blocked
+          - entity: sensor.pi_hole_seen_clients
+            name: Clients
+          - entity: binary_sensor.pi_hole_core_update_available
+        theme: kibibit-dark-cards
+  - title: NAS
+    path: nas
+    icon: mdi:harddisk
+    theme: kibibit-dark-cards
+    badges: []
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: glance
+            entities:
+              - entity: binary_sensor.centaurus_security_status
+                name: Centaurus Security
+              - entity: sensor.centaurus_status
+              - entity: sensor.cygnus_status
+            theme: kibibit-dark-cards
+          - type: horizontal-stack
+            cards:
+              - type: custom:stack-in-card
+                mode: vertical
+                theme: ios-dark-mode
+                cards:
+                  - type: custom:button-card
+                    theme: ios-dark-theme
+                    color_type: label-card
+                    color: rgb(27, 24, 24)
+                    name: Centaurus (Synology)
+                    styles: null
+                    card:
+                      - height: 15px
+                  - type: gauge
+                    entity: sensor.centaurus_used_space
+                    min: 0
+                    max: 20
+                    name: Used Space
+                    needle: true
+                    severity:
+                      green: 0
+                      yellow: 10
+                      red: 16
+                  - type: custom:swipe-card
+                    card_width: 185px
+                    start_card: 1
+                    parameters:
+                      effect: cube
+                      grabCursor: true
+                      centeredSlides: true
+                      slidesPerView: auto
+                      coverflowEffect:
+                        rotate: 50
+                        stretch: 0
+                        depth: 100
+                        modifier: 1
+                        slideShadows: true
+                      pagination:
+                        type: bullets
+                    cards:
+                      - type: custom:mini-graph-card
+                        name: CPU
+                        entities:
+                          - sensor.centaurus_cpu_utilization_total
+                        line_color: blue
+                        line_width: 8
+                        font_size: 75
+                      - type: custom:mini-graph-card
+                        name: Ram
+                        entities:
+                          - sensor.centaurus_memory_usage_real
+                        line_color: '#e74c3c'
+                        line_width: 8
+                        font_size: 75
+                      - type: custom:mini-graph-card
+                        name: Temp
+                        entities:
+                          - sensor.centaurus_average_disk_temp
+                        line_color: var(--accent-color)
+                        line_width: 8
+                        font_size: 75
+              - type: custom:stack-in-card
+                mode: vertical
+                cards:
+                  - type: custom:button-card
+                    color_type: label-card
+                    color: rgb(27, 24, 24)
+                    name: 'TODO: Arcturus (OMV)'
+                    styles: null
+                    card:
+                      - height: 15px
+                  - type: gauge
+                    entity: sensor.centaurus_used_space
+                    min: 0
+                    max: 54
+                    severity:
+                      green: 0
+                      yellow: 30
+                      red: 43
+                    name: Used Space
+                    needle: true
+                  - type: custom:swipe-card
+                    card_width: 185px
+                    start_card: 1
+                    parameters:
+                      effect: cube
+                      grabCursor: true
+                      centeredSlides: true
+                      slidesPerView: auto
+                      coverflowEffect:
+                        rotate: 50
+                        stretch: 0
+                        depth: 100
+                        modifier: 1
+                        slideShadows: true
+                      pagination:
+                        type: bullets
+                    cards:
+                      - type: custom:mini-graph-card
+                        name: CPU
+                        entities:
+                          - sensor.centaurus_cpu_utilization_total
+                        line_color: blue
+                        line_width: 8
+                        font_size: 75
+                      - type: custom:mini-graph-card
+                        name: Ram
+                        entities:
+                          - sensor.centaurus_memory_usage_real
+                        line_color: '#e74c3c'
+                        line_width: 8
+                        font_size: 75
+                      - type: custom:mini-graph-card
+                        name: Temp
+                        entities:
+                          - sensor.centaurus_average_disk_temp
+                        line_color: var(--accent-color)
+                        line_width: 8
+                        font_size: 75
+              - type: custom:stack-in-card
+                mode: vertical
+                cards:
+                  - type: custom:button-card
+                    color_type: label-card
+                    color: rgb(27, 24, 24)
+                    name: Cygnus (QNAP)
+                    styles: null
+                    card:
+                      - height: 15px
+                  - type: gauge
+                    min: 0
+                    max: 5480
+                    entity: sensor.cygnus_used_space_volume_1
+                    severity:
+                      green: 0
+                      yellow: 3738
+                      red: 4618
+                    name: Used Space
+                    needle: true
+                  - type: custom:swipe-card
+                    theme: ios-dark-theme
+                    card_width: 185px
+                    start_card: 1
+                    parameters:
+                      effect: cube
+                      grabCursor: true
+                      centeredSlides: true
+                      slidesPerView: auto
+                      coverflowEffect:
+                        rotate: 50
+                        stretch: 0
+                        depth: 100
+                        modifier: 1
+                        slideShadows: true
+                      pagination:
+                        type: bullets
+                    cards:
+                      - type: custom:mini-graph-card
+                        name: CPU
+                        entities:
+                          - sensor.cygnus_cpu_usage
+                        line_color: blue
+                        line_width: 8
+                        font_size: 75
+                      - type: custom:mini-graph-card
+                        name: Ram
+                        entities:
+                          - sensor.cygnus_memory_usage
+                        line_color: '#e74c3c'
+                        line_width: 8
+                        font_size: 75
+                      - type: custom:mini-graph-card
+                        name: Temp
+                        entities:
+                          - sensor.cygnus_system_temperature
+                        line_color: var(--accent-color)
+                        line_width: 8
+                        font_size: 75
+  - title: Docker
+    path: docker
+    icon: mdi:docker
+    theme: kibibit-dark-cards
+    badges: []
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: vertical-stack
+                cards:
+                  - type: entities
+                    entities:
+                      - entity: sensor.docker_version
+                      - entity: sensor.docker_containers_running
+                      - entity: sensor.docker_containers_total
+                    title: Docker
+                    theme: ios-dark-mode
+          - type: custom:stack-in-card
+            mode: vertical
+            cards:
+              - type: grid
+                title: Containers
+                square: false
+                cards:
+                  - type: custom:uptime-card
+                    title_template: Authelia
+                    entity: sensor.docker_authelia_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      header: spaced
+                      status: spaced
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    entity: sensor.docker_bazarr_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      status: spaced
+                      header: left
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    title_template: Bazarr
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    entity: sensor.docker_bookstack_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      status: spaced
+                      header: left
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    title_template: BookStack
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    entity: sensor.docker_bookstackdb_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      status: spaced
+                      header: left
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    title_template: BookStack DB
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    entity: sensor.docker_homeassistantdb_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      status: spaced
+                      header: left
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    title_template: Recorder DB
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    entity: sensor.docker_calibre_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      status: spaced
+                      header: left
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    title_template: Calibre
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    entity: sensor.docker_calibre_web_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      status: spaced
+                      header: left
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    title_template: Calibre-Web
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    entity: sensor.docker_sonarr_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      status: spaced
+                      header: left
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    title_template: Sonarr
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    entity: sensor.docker_radarr_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      status: spaced
+                      header: left
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    title_template: Radarr
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    entity: sensor.docker_lidarr_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      status: spaced
+                      header: left
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    title_template: Lidarr
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    entity: sensor.docker_readarr_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      status: spaced
+                      header: left
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    title_template: Readarr
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    entity: sensor.docker_sabnzbd_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      status: spaced
+                      header: left
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    title_template: Sabnzbd
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    entity: sensor.docker_qbittorrent_secure_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      status: spaced
+                      header: left
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    title_template: Qbittorrent-S
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    entity: sensor.docker_qbittorrent_unsecure_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      status: spaced
+                      header: left
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    title_template: Qbittorrent-I
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    entity: sensor.docker_pihole_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      status: spaced
+                      header: left
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    title_template: Pi-Hole
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    entity: sensor.docker_proxymanager_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      status: spaced
+                      header: left
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    title_template: NPM
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    entity: sensor.docker_proxymanagerdb_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      status: spaced
+                      header: left
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    title_template: NPM DB
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    title_template: Portainer
+                    entity: sensor.docker_portainer_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      header: spaced
+                      status: spaced
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    title_template: Plex
+                    entity: sensor.docker_plex_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      header: spaced
+                      status: spaced
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    title_template: Jellyfin
+                    entity: sensor.docker_jellyfin_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      header: spaced
+                      status: spaced
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    title_template: Tautulli
+                    entity: sensor.docker_tautulli_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      header: spaced
+                      status: spaced
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    title_template: Mealie
+                    entity: sensor.docker_mealie_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      header: spaced
+                      status: spaced
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    title_template: Logz
+                    entity: sensor.docker_logz_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      header: spaced
+                      status: spaced
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    title_template: OpenVPN
+                    entity: sensor.docker_vpn_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      header: spaced
+                      status: spaced
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    title_template: ESP-Home
+                    entity: sensor.docker_esphome_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      header: spaced
+                      status: spaced
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    title_template: MQTT
+                    entity: sensor.docker_otmq_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      header: spaced
+                      status: spaced
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    title_template: Vaultwarden
+                    entity: sensor.docker_vaultwarden_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      header: spaced
+                      status: spaced
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    title_template: Watchtower
+                    entity: sensor.docker_watchtower_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      header: spaced
+                      status: spaced
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                  - type: custom:uptime-card
+                    title_template: Z2M
+                    entity: sensor.docker_zigbee2mqtt_state
+                    status_adaptive_color: false
+                    color:
+                      ko: '#FF5050'
+                    ok: running
+                    ko: exited
+                    tap_action:
+                      action: more-info
+                    bar: {}
+                    show:
+                      timeline: true
+                      status: false
+                      title: true
+                      header: true
+                      icon: false
+                      footer: true
+                      average: false
+                    alignment:
+                      header: spaced
+                      status: spaced
+                    alias:
+                      ok: Ok
+                      ko: Down
+                    tooltip: {}
+                    title_adaptive_color: true
+                    init:
+                      animation: raise
+                    blink:
+                      effect: fade
+                      target: title
+                      speed: 2
+                columns: 3
+  - title: Matt
+    icon: mdi:alien-outline
+    path: matt
+    theme: kibibit-dark-cards
+    badges: []
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: vertical-stack
+            cards:
+              - type: custom:stack-in-card
+                mode: vertical
+                cards:
+                  - type: entity
+                    entity: counter.pocketmoney_dan
+                    name: Dan Pocket Money
+                    unit: $
+                    icon: mdi:face-man-outline
+                    theme: ios-dark-mode
+                  - type: horizontal-stack
+                    cards:
+                      - type: button
+                        tap_action:
+                          action: toggle
+                        entity: input_boolean.pocketmoney_dan_active
+                        show_name: false
+                        icon: mdi:alarm-light
+                      - type: button
+                        tap_action:
+                          action: call-service
+                          service: script.script_pocketmoney_increment
+                          service_data:
+                            pocketmoney_payee: dan
+                          target: {}
+                        show_icon: false
+                        name: Add
+                      - type: button
+                        tap_action:
+                          action: call-service
+                          service: script.pocket_money_decrement
+                          service_data:
+                            pocketmoney_payee: dan
+                          target: {}
+                        show_icon: false
+                        name: Take
+              - type: custom:stack-in-card
+                mode: vertical
+                cards:
+                  - type: entity
+                    entity: counter.pocketmoney_laura
+                    name: Laura Pocket Money
+                    unit: $
+                    icon: mdi:face-woman-outline
+                    theme: ios-dark-mode
+                  - type: horizontal-stack
+                    cards:
+                      - type: button
+                        tap_action:
+                          action: toggle
+                        entity: input_boolean.pocketmoney_laura_active
+                        show_name: false
+                        icon: mdi:alarm-light
+                      - type: button
+                        tap_action:
+                          action: call-service
+                          service: script.script_pocketmoney_increment
+                          service_data:
+                            pocketmoney_payee: laura
+                          target: {}
+                        show_icon: false
+                        name: Add
+                      - type: button
+                        tap_action:
+                          action: call-service
+                          service: script.pocket_money_decrement
+                          service_data:
+                            pocketmoney_payee: laura
+                          target: {}
+                        show_icon: false
+                        name: Take
+              - type: entities
+                title: Smoking
+                theme: kibibit-dark-cards
+                entities:
+                  - entity: sensor.mp_not_smoking_days
+                    name: Days not smoking
+                    icon: mdi:smoke
+                  - entity: sensor.mp_money_saved
+                    name: Total saved since vaping
+                    icon: mdi:emoticon-cool-outline
+              - type: entities
+                theme: kibibit-dark-cards
+                entities:
+                  - entity: sensor.local_ip
+              - type: entities
+                theme: kibibit-dark-cards
+                title: H-A
+                entities:
+                  - entity: binary_sensor.updater
+                  - entity: sensor.h_a_current_version_2
+                  - entity: sensor.h_a_latest_version_2
+                  - entity: sensor.hacs
+                  - type: attribute
+                    entity: sensor.hacs
+                    attribute: repositories
+              - type: custom:apexcharts-card
+                header:
+                  show: true
+                  title: Posterr
+                  show_states: true
+                  colorize_states: true
+                series:
+                  - entity: sensor.petersem_posterr_issues
+                    type: line
+                    color: red
+                    name: ' '
+                  - entity: sensor.petersem_posterr_stars
+                    type: line
+                    color: yellow
+                    name: ' '
+                  - entity: sensor.petersem_posterr_watchers
+                    type: line
+                    color: green
+                    name: ' '
+              - type: custom:apexcharts-card
+                header:
+                  show: true
+                  title: Dockerholics
+                  show_states: true
+                  colorize_states: true
+                series:
+                  - entity: sensor.petersem_dockerholics_issues
+                    type: line
+                    color: red
+                    name: ' '
+                  - entity: sensor.petersem_dockerholics_stars
+                    type: line
+                    color: yellow
+                    name: ' '
+                  - entity: sensor.petersem_dockerholics_watchers
+                    type: line
+                    color: green
+                    name: ' '
+  - title: Dan
+    path: dan
+    icon: mdi:face-man-outline
+    theme: kibibit-dark-cards
+    badges: []
+    cards: []
+  - title: Laura
+    path: laura
+    icon: mdi:face-woman-outline
+    theme: kibibit-dark-cards
+    badges: []
+    cards: []
+  - title: Test 1
+    path: test-1
+    theme: kibibit-dark-cards
+    badges: []
+    cards:
+      - type: button
+        tap_action:
+          action: call-service
+          service: script.1640147150330
+          service_data:
+            random_playlist: true
+            playlist: 6naHkghfeIqkTh7zg59aEU
+          target: {}
+        entity: media_player.study_1
+        name: Study Random
+        icon: mdi:rocket-launch-outline
+        show_icon: false
+      - type: custom:apexcharts-card
+        header:
+          title: WAN Bandwidth
+        series:
+          - entity: sensor.speedtest_download
+          - entity: sensor.speedtest_upload
+            invert: true
+      - type: entities
+        entities:
+          - sensor.people_home
+      - type: custom:slider-button-card
+        entity: light.mood
+        slider:
+          direction: left-right
+          background: gradient
+          use_state_color: true
+          use_percentage_bg_opacity: true
+          show_track: false
+          toggle_on_click: false
+          force_square: false
+        show_name: true
+        show_state: true
+        compact: false
+        icon:
+          show: true
+          use_state_color: true
+          tap_action:
+            action: more-info
+        action_button:
+          mode: toggle
+          icon: mdi:power
+          show: true
+          show_spinner: true
+          tap_action:
+            action: toggle
+  - title: Media
+    path: media
+    icon: mdi:movie-open-play
+    theme: kibibit-dark-cards
+    badges: []
+    cards:
+      - type: iframe
+        url: https://posterr.plonk.duckdns.org/
+        aspect_ratio: 150%

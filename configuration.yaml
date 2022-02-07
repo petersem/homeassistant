@@ -1,0 +1,210 @@
+frontend:
+  themes: !include_dir_merge_named themes
+
+#
+# Logger options
+#
+logger:
+  default: warn
+  logs:
+    homeassistant.components.recorder: debug
+
+#
+# Lovelace mode
+#
+# lovelace:
+#   mode: yaml
+
+#
+# Includes
+#
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+light: !include lights.yaml
+binary_sensor: !include binary_sensors.yaml
+sensor: !include sensors.yaml
+monitor_docker: !include docker.yaml
+#garbage_collection: !include garbage_collection.yaml
+template: !include templates.yaml
+
+#
+# Home Assistant Basic Config
+#
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 0
+  unit_system: metric
+  currency: AUD
+  time_zone: "Australia/Brisbane"
+  external_url: !secret url_ha
+  internal_url: "http://192.168.1.135:8123"
+  allowlist_external_urls:
+    - !secret url_ha
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 172.20.0.0/24
+    - 127.0.0.1
+    - 172.0.1.5
+    - "::1"
+  #ip_ban_enabled: true
+  #login_attempts_threshold: 5
+  cors_allowed_origins:
+    - !secret url_ha
+    - http://192.168.1.135:8123
+    - https://cast.home-assistant.io
+  #ip_ban_enabled: true
+  #login_attempts_threshold: 3
+
+
+# media_player:
+#   - platform: androidtv
+#     name: Living Room TCL
+#     host: 192.168.1.225
+#     apps:
+#       com.plexapp.android: Plex
+    # state_detection_rules:
+    #   'com.alexvas.dvr.pro':
+    #     - 'playing':
+    #       'wake_lock_size': 3
+    #     - 'playing':
+    #       'wake_lock_size': 5
+    #     - 'playing':
+    #       'wake_lock_size': 6
+    #     - 'standby'
+
+config_editor:
+
+timer:
+  meeting:
+    duration: "00:01:00"
+
+panel_iframe:
+  code_server:
+    title: "Code Server"
+    url: !secret url_cs
+    icon: mdi:microsoft-visual-studio-code
+    require_admin: true
+  esphome:
+    title: "ESPHome"
+    url: !secret url_esp
+    icon: mdi:chip
+    require_admin: true
+  node_red:
+    title: "Node-Red"
+    url: !secret url_nr
+    icon: mdi:sitemap-outline
+    require_admin: true
+  zigbee2mqtt:
+    title: "Zigbee2MQTT"
+    url: !secret url_z2m
+    icon: mdi:zigbee
+    require_admin: true
+  zigstar:
+    title: "ZigStar"
+    url: !secret url_zs
+    icon: mdi:space-invaders
+    require_admin: true
+
+# Text to speech
+tts:
+  - platform: google_translate
+    cache: true
+    cache_dir: /tmp/tts
+    time_memory: 300
+    base_url: !secret url_ha
+    service_name: google_say
+
+#
+# Recorder db (mariadb) setup and purge schedule
+#
+recorder:
+  db_url: !secret r_db_url
+
+# tplink:
+#   discovery: false
+#   switch:
+#     - host: 192.168.1.192
+
+# switch:
+#   - platform: remote_rpi_gpio
+#     host: 192.168.1.2
+#     ports:
+#       11: Fan Office
+#       12: Light Desk
+
+# counter:
+#   women_lining_up_to_date_matt:
+#     initial: 0
+#     step: 1
+
+sonos:
+  media_player:
+    hosts:
+      - 192.168.1.141
+      - 192.168.1.208
+      - 192.168.1.128
+      - 192.168.1.88
+
+spotify:
+  client_id: !secret spotify_id
+  client_secret: !secret spotify_secret
+
+spotcast:
+  sp_dc: !secret sp_dc
+  sp_key: !secret sp_key
+
+anniversaries:
+  sensors:
+  - name: Car Insurance
+    date: '02-17'
+  - name: Car Registration
+    date: '05-14'
+
+aarlo:
+ username: !secret arlo_username
+ password: !secret arlo_password
+
+#
+# nmap tracker
+#
+# device_tracker:
+#   - platform: nmap_tracker
+#     hosts:
+#       - 192.168.1.126
+
+# device_tracker:
+#   - platform: nmap_tracker
+#     hosts:
+#       - 192.168.1.97
+
+# device_tracker:
+#   - platform: nmap_tracker
+#     hosts:
+#       - 192.168.1.113
+
+# 
+# Telegram messaging
+telegram_bot: 
+  - platform: broadcast 
+    api_key: !secret telegram_api
+    allowed_chat_ids:
+      - !secret telegram_chat_id
+
+     
+
+
+
+
+
+
+
+

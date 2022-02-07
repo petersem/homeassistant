@@ -1,0 +1,215 @@
+sonos_say:
+  alias: Sonos TTS script
+  sequence:
+  - service: sonos.snapshot
+    data_template:
+      entity_id: media_player.living_room
+  - service: sonos.unjoin
+    data_template:
+      entity_id: media_player.living_room
+  - service: tts.google_say
+    data_template:
+      entity_id: media_player.living_room
+      message: hello there Matt
+  - delay: 5
+  - service: sonos.restore
+    data_template:
+      entity_id: media_player.living_room
+  mode: single
+date_night:
+  sequence:
+  - service: media_player.volume_up
+    target:
+      entity_id:
+      - media_player.living_room
+      - media_player.patio
+  mode: single
+  icon: mdi:arrow-up-bold
+  alias: sonos vol up
+activate_alarm:
+  alias: Activate alarm
+  sequence:
+  - service: alarm_control_panel.alarm_arm_away
+    target:
+      entity_id: alarm_control_panel.alexa_guard_8a623
+  mode: single
+  icon: mdi:alarm-light
+disarm_alarm:
+  alias: Disarm alarm
+  sequence:
+  - service: alarm_control_panel.alarm_disarm
+    target:
+      entity_id: alarm_control_panel.alexa_guard_8a623
+  mode: single
+  icon: mdi:alarm-light-outline
+'1639522213757':
+  sequence:
+  - service: media_player.volume_set
+    target:
+      entity_id:
+      - media_player.living_room
+      - media_player.patio
+      - media_player.study_1
+      - media_player.study_2
+    data:
+      volume_level: 0.3
+  mode: single
+  icon: mdi:rocket
+  alias: Sound-low
+'1639522597943':
+  sequence:
+  - service: media_player.media_pause
+    target:
+      entity_id:
+      - media_player.living_room
+      - media_player.patio
+      - media_players.study_1
+      - media_players.study_2
+  mode: single
+  icon: mdi:rocket
+  alias: music pause
+'1639523629706':
+  sequence:
+  - service: media_player.volume_down
+    target:
+      entity_id:
+      - media_player.living_room
+      - media_player.patio
+  mode: single
+  icon: mdi:arrow-down-bold
+  alias: sonos vol down
+'1639529876097':
+  alias: Group Speakers - Living
+  sequence:
+  - service: sonos.join
+    data:
+      master: media_player.living_room
+      entity_id: all
+  mode: single
+  icon: mdi:speaker-multiple
+'1640140350496':
+  alias: play spotify on sonos study
+  sequence:
+  - service: media_player.volume_set
+    target:
+      entity_id:
+      - media_player.study_1
+      - media_player.study_2
+      - media_player.living_room
+      - media_player.patio
+    data:
+      volume_level: 0.2
+  - service: sonos.join
+    data:
+      master: media_player.study_1
+      entity_id: media_player.study_2
+  - service: media_player.shuffle_set
+    data:
+      entity_id: media_player.study_1
+      shuffle: true
+  - service: media_player.play_media
+    target:
+      entity_id: media_player.study_1
+    data:
+      media_content_id: https://open.spotify.com/playlist/{{ playlist_id }}
+      media_content_type: music
+  mode: single
+  icon: mdi:chair-rolling
+play_spotify_on_sonos_living:
+  alias: play spotify on sonos living
+  sequence:
+  - service: media_player.volume_set
+    target:
+      entity_id:
+      - media_player.living_room
+      - media_player.patio
+      - media_player.study_1
+      - media_player.study_2
+    data:
+      volume_level: 0.2
+  - service: sonos.join
+    data:
+      master: media_player.living_room
+      entity_id: media_player.patio
+  - service: media_player.shuffle_set
+    data:
+      entity_id: media_player.living_room
+      shuffle: true
+  - service: media_player.play_media
+    target:
+      entity_id: media_player.living_room
+    data:
+      media_content_id: https://open.spotify.com/playlist/{{ playlist_id }}
+      media_content_type: music
+  mode: single
+  icon: mdi:chair-rolling
+'1640147150330':
+  alias: play random spotify on sonos study
+  sequence:
+  - service: media_player.volume_set
+    target:
+      entity_id:
+      - media_player.study_1
+      - media_player.study_2
+      - media_player.living_room
+      - media_player.patio
+    data:
+      volume_level: 0.2
+  - service: sonos.join
+    data:
+      master: media_player.study_1
+      entity_id: media_player.study_2
+  - service: media_player.shuffle_set
+    data:
+      entity_id: media_player.study_1
+      shuffle: true
+  - service: media_player.play_media
+    target:
+      entity_id: media_player.study_1
+    data:
+      media_content_id: "{% if random_playlist == true %}\n  https://open.spotify.com/playlist/{{[\"\
+        6YXqIQpb7EZGgYk2z87zjY\",\"31NdbLL4zCs7NT7mWp2ZdV\",\"4dGhAPTgWk8PefKcVBmQMZ\"\
+        ,\"6Y0NhjmJ0l5eU913NrsaOg\",\"6Y7jX5AA9dvhRMdzdnx5VC\"]|random}}\n{% else\
+        \ %}\n  https://open.spotify.com/playlist/{{playlist}}\n{% endif %}"
+      media_content_type: music
+  mode: single
+  icon: mdi:bowl-mix-outline
+light_modes:
+  sequence:
+  - service: counter.increment
+    target:
+      entity_id: counter.counter_light_colour
+  - condition: numeric_state
+    entity_id: counter.counter_light_colour
+    above: '4'
+  - service: counter.reset
+    target:
+      entity_id: counter.counter_light_colour
+  - condition: state
+    entity_id: counter.counter_light_colour
+    state: '0'
+  - type: turn_on
+    device_id: b66ded52c2077db11a4a2f57a89ca5ff
+    entity_id: light.kitchen_lights
+    domain: light
+    brightness_pct: 20
+  mode: single
+  alias: light modes
+  icon: mdi:palette-outline
+script_pocketmoney_increment:
+  alias: pocket money increment
+  sequence:
+  - condition: template
+    value_template: '{{is_state("input_boolean.pocketmoney_"+pocketmoney_payee+"_active",
+      "on")}}'
+  - service: counter.increment
+    target:
+      entity_id: counter.pocketmoney_{{ pocketmoney_payee }}
+  mode: single
+pocket_money_decrement:
+  alias: pocket money decrement
+  sequence:
+  - service: counter.decrement
+    target:
+      entity_id: counter.pocketmoney_{{ pocketmoney_payee }}
+  mode: single

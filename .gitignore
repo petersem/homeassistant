@@ -1,0 +1,20 @@
+# ignore secrets
+secrets.yaml
+
+# ignore general files and folders
+.aarlo/
+.cloud/
+.storage/
+appdaemon/
+blueprints/
+custom_components/
+deps/
+image/
+themes/
+tts/
+www/@eaDir/
+www/community/
+www/hacs-files
+www/upcoming-media-card-images
+zigbee.db
+/home-assist.log.*

@@ -1,0 +1,635 @@
+
+#sensor:
+  #
+  # testing mqtt sensor 1
+  #
+  - platform: mqtt
+    name: "mqtt_test"
+    state_topic: "client-send"
+
+  #
+  # Torque sensor
+  #
+  - platform: mqtt
+    name: "Redline" 
+    state_topic: "devices/redline/torque"
+    value_template: "{{ state_attr('sensor.redline_torque', 'GPS Time') }}"
+    json_attributes_topic: "devices/redline/torque"
+
+  #
+  # testing mqtt sensor 2
+  #
+  - platform: mqtt
+    state_topic: "home-assistant/weather/device/1"
+    name: "Temperature"
+    unit_of_measurement: "°C"
+    value_template: "{{ value_json.temperature }}"
+
+  - platform: mqtt 
+    name: Zigbee2mqtt Networkmap 
+    # if you change base_topic of Zigbee2mqtt, change state_topic accordingly 
+    state_topic: zigbee2mqtt/bridge/response/networkmap 
+    value_template: >- 
+       {{ now().strftime('%Y-%m-%d %H:%M:%S') }} 
+    # again, if you change base_topic of Zigbee2mqtt, change json_attributes_topic accordingly 
+    json_attributes_topic: zigbee2mqtt/bridge/response/networkmap 
+    json_attributes_template: "{{ value_json.data.value | tojson }}"
+
+
+  # 
+  # QNAP NAS sensor
+  - platform: qnap
+    host: 192.168.1.55
+    port: 8080
+    username: !secret qnap_user
+    password: !secret qnap_psw
+    monitored_conditions:
+      - status
+      - cpu_usage
+      - memory_percent_used
+      - network_tx
+      - volume_percentage_used
+      - system_temp
+      - volume_size_used
+
+  #
+  # Date/Time sensor for revised clock/world time display
+  #
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+      - 'date_time'
+      - 'date_time_utc'
+      - 'date_time_iso'
+      - 'time_date'
+      - 'time_utc'
+      - 'beat'
+
+  # 
+  # Air quality sensor
+  #
+  - platform: waqi
+    token: !secret aqicn_token
+    locations:
+      - brisbane
+
+  #
+  # xbox 'dan' daily online history sensort
+  #
+  - platform: history_stats
+    name: xbox dan time
+    entity_id: binary_sensor.get_plonked
+    type: time
+    state: "on"
+    start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+    end: "{{ now().replace(hour=23, minute=59, second=59) }}"
+    # duration:
+    #   days: 1
+
+  #
+  # xbox 'dan' online history sensort
+  #
+  - platform: history_stats
+    name: xbox weekly
+    entity_id: binary_sensor.get_plonked
+    type: time
+    state: "on"
+    end: "{{ now().replace(hour=0, minute=0, second=0) }}"
+    duration:
+      days: 7
+
+  #
+  # Moon integration
+  #
+  - platform: moon
+
+  #
+  # Centaurus uptime history sensor
+  #
+  - platform: history_stats
+    name: Centaurus uptime last 7 days
+    entity_id: device_tracker.centaurus
+    type: time
+    state: "home"
+    # start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+    end: "{{ now().replace(hour=0, minute=0, second=0) }}"
+    duration:
+      days: 7
+
+  #
+  # ESP32 Outside uptime sensor
+  #
+  - platform: history_stats
+    name: esp32 outside uptime last 7 days
+    entity_id: device_tracker.centaurus
+    type: time
+    state: "home"
+    # start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+    end: "{{ now().replace(hour=0, minute=0, second=0) }}"
+    duration:
+      days: 7
+
+
+  #
+  # Kindle daily usage history sensor
+  #
+  - platform: history_stats
+    name: kindle use today
+    entity_id: device_tracker.amazon_technologies_c7_13_4d
+    type: time
+    state: "home"
+    start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+    end: "{{ now().replace(hour=23, minute=59, second=59) }}"
+#    duration:
+#      days: 7
+
+  #
+  # Kindle usage history sensor
+  #
+  - platform: history_stats
+    name: kindle_weekly
+    entity_id: device_tracker.amazon_technologies_c7_13_4d
+    type: time
+    state: "home"
+    # start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+    end: "{{ now().replace(hour=0, minute=0, second=0) }}"
+    duration:
+      days: 7
+
+  # #
+  # # Time to Nudgee
+  # #
+  # - platform: waze_travel_time
+  #   name: Waze Nudgee
+  #   origin: zone.home
+  #   destination: 1097 Nudgee Rd, Nudgee QLD 4014
+  #   units: 'metric'
+  #   vehicle_type: 'car'
+  #   region: 'AU'
+  #   avoid_toll_roads: true
+
+  # #
+  # # Time to Clontarf
+  # #
+  # - platform: waze_travel_time
+  #   name: Waze Clontarf
+  #   origin: zone.home
+  #   destination: 10-22 Hornibrook Esplanade, Clontarf QLD 4019
+  #   units: 'metric'
+  #   vehicle_type: 'car'
+  #   region: 'AU'
+  #   avoid_toll_roads: true
+
+  # #
+  # # Time to city
+  # #
+  # - platform: waze_travel_time
+  #   name: Waze City
+  #   origin: zone.home
+  #   destination: 400 George St, Brisbane QLD 4000
+  #   units: 'metric'
+  #   vehicle_type: 'car'
+  #   region: 'AU'
+  #   avoid_toll_roads: true
+
+  # #
+  # # Matt distance to Laura
+  # #
+  # - platform: waze_travel_time
+  #   name: Waze Matt to Laura
+  #   origin: device_tracker.oneplus_a5000
+  #   destination: device_tracker.lauras_iphone
+  #   units: 'metric'
+  #   vehicle_type: 'car'
+  #   region: 'AU'
+  #   avoid_toll_roads: true
+
+  # #
+  # # Matt distance to Daniel
+  # #
+  # - platform: waze_travel_time
+  #   name: Waze Matt to Dan
+  #   origin: device_tracker.oneplus_a5000
+  #   destination: person.dan_petersen
+  #   units: 'metric'
+  #   vehicle_type: 'car'
+  #   region: 'AU'
+  #   avoid_toll_roads: true
+
+  # #
+  # # Time to Gold Coast
+  # #
+  # - platform: waze_travel_time
+  #   name: Waze Gold Coast
+  #   origin: zone.home
+  #   destination: Gold Coast QLD 4000
+  #   units: 'metric'
+  #   vehicle_type: 'car'
+  #   region: 'AU'
+  #   avoid_toll_roads: true
+
+  # #
+  # # Time for Matt to get home
+  # #
+  # - platform: waze_travel_time
+  #   name: Waze Matt Home
+  #   origin: device_tracker.oneplus_a5000
+  #   destination: zone.home
+  #   units: 'metric'
+  #   vehicle_type: 'car'
+  #   region: 'AU'
+  #   avoid_toll_roads: true
+
+  #
+  # Scrape Petrol Price
+  #
+  # - platform: scrape
+  #   name: petrol brisbane
+  #   resource: view-source:https://www.qld.gov.au/health/conditions/health-alerts/coronavirus-covid-19/current-status/statistics
+  #   select: "casesummary"    
+  #   headers:
+  #     User-Agent: Mozilla/5.0
+
+  #
+  # ZigStar Sensor Scrape
+  #
+  # - platform: scrape
+  #   name: "Zigstar Temp"
+  #   #icon_template: "mdi:thermometer-low"
+  #   resource: http://192.168.1.97
+  #   select: "#genConfig"   
+  #   #index: 2
+  #   value_template: "{{ value.split('°')[0].split('ESP Temperature : ')[1] | float(2) }}"
+  #   unit_of_measurement: "°C" 
+  #   headers:
+  #     User-Agent: Mozilla/5.0
+
+  #
+  # Average Temps
+  #
+  - platform: average
+    name: 'Average Weekly Temperature'
+    #icon_template: "mdi:thermometer-low"
+    duration:
+      days: 7
+    entities:
+      - weather.fig_tree_pocket
+
+  #
+  # RSS Feed sensor
+  #
+  # - platform: feedparser
+  #   name: Engineering Feed
+  #   feed_url: 'https://www.sciencedaily.com/rss/matter_energy/engineering.xml'
+  #   date_format: '%a, %b %d %I:%M %p'
+  #   scan_interval:
+  #     hours: 3
+  #   inclusions:
+  #     - title
+  #     - link
+  #     - description
+  #     - image
+  #     - language
+  #     - pubDate
+  #   exclusions:
+  #     - language
+    
+  # #
+  # # Zigstar template for F
+  # #
+  # - platform: template
+  #   sensors:
+  #     zigstar_temp_f:
+  #       friendly_name: "Zigstar F"
+  #       icon_template: "mdi:thermometer-low"
+  #       unit_of_measurement: '°F'
+  #       value_template: >-
+  #         {% set t = states('sensor.zigstar_internal_temp') | float(2) %}
+  #         {{((t)*9/5)+32}}
+  #       availability_template: >-
+  #         {{ (states('sensor.zigstar_temp') | float(2)) >= 0 }}
+
+  - platform: template
+    sensors:
+      zigstar_internal_temp:
+        friendly_name: "Zigstar Temperature"
+        icon_template: "mdi:thermometer-low"
+        unit_of_measurement: '°C'
+        value_template: >-
+          {{ state_attr('sensor.ow_temperature', 'temperature') }}
+
+  - platform: scrape
+    name: QLD Covid Active Cases - Total
+    resource: https://covidlive.com.au/report/daily-active-cases/qld
+    select: ".DAILY-ACTIVE-CASES tr:nth-child(2) .COL2.ACTIVE"
+
+  - platform: scrape
+    name: QLD Covid Active Cases Change - Today
+    resource: https://covidlive.com.au/report/daily-active-cases/qld
+    select: ".DAILY-ACTIVE-CASES tr:nth-child(2) .COL4.NET"
+
+  - platform: scrape
+    name: QLD Covid Deaths - Today
+    resource: https://covidlive.com.au/report/daily-deaths/qld
+    select: ".DAILY-DEATHS tr:nth-child(2) .COL4.NET"
+
+  - platform: scrape
+    name: QLD Covid Deaths - Total
+    resource: https://covidlive.com.au/report/daily-deaths/qld
+    select: ".DAILY-DEATHS tr:nth-child(2) .COL2.DEATHS"
+
+  - platform: scrape
+    name: QLD Covid Hospitalisations ICU - Total
+    resource: https://covidlive.com.au/report/daily-hospitalised/qld
+    select: ".DAILY-HOSPITALISED tr:nth-child(2) .COL3.ICU"
+
+  - platform: scrape
+    name: QLD Covid Hospitalisations Vent - TOTAL
+    resource: https://covidlive.com.au/report/daily-hospitalised/qld
+    select: ".DAILY-HOSPITALISED tr:nth-child(2) .COL4.VENT"
+
+  - platform: scrape
+    name: QLD Covid Hospitalisations - TOTAL
+    resource: https://covidlive.com.au/report/daily-hospitalised/qld
+    select: ".DAILY-HOSPITALISED tr:nth-child(2) .COL2.HOSP"
+
+  - platform: scrape
+    name: QLD Covid Cases - Total
+    resource: https://covidlive.com.au/report/daily-cases/qld
+    select: ".DAILY-CASES tr:nth-child(2) .COL3.CASES"
+
+  - platform: scrape
+    name: QLD Covid Cases - Today
+    resource: https://covidlive.com.au/report/daily-cases/qld
+    select: ".DAILY-CASES tr:nth-child(2) .COL5.NET"
+    
+
+  - platform: scrape
+    name: QLD Covid Cases - Last Update
+    resource: https://covidlive.com.au/report/daily-cases/qld
+    select: ".DAILY-CASES tr:nth-child(2) .COL1.DATE"
+
+  - platform: rest
+    name: QLD Fuel U98
+    json_attributes_path: "*[?(@.region=='QLD')].prices[?(@.type=='U98')]"
+    json_attributes:
+      - suburb
+      - lat
+      - lng
+      - postcode
+      - name
+      - type
+      - price
+      - state
+    resource: https://projectzerothree.info/api.php?format=json
+    value_template: "{{ state_attr('sensor.qld_fuel_u98', 'name') | replace('11-Seven','Seven-11')}}  - {{ state_attr('sensor.qld_fuel_u98', 'price') }}"
+    unit_of_measurement: "¢"
+
+  - platform: rest
+    name: QLD Fuel U95
+    json_attributes_path: "*[?(@.region=='QLD')].prices[?(@.type=='U95')]"
+    json_attributes:
+      - suburb
+      - lat
+      - lng
+      - postcode
+      - name
+      - type
+      - price
+      - state
+    resource: https://projectzerothree.info/api.php?format=json
+    value_template: "{{ state_attr('sensor.qld_fuel_u95', 'name') | replace('11-Seven','Seven-11')}}  - {{ state_attr('sensor.qld_fuel_u95', 'price') }}"
+    unit_of_measurement: "¢"
+
+  - platform: rest
+    name: QLD Fuel U91
+    json_attributes_path: "*[?(@.region=='QLD')].prices[?(@.type=='U91')]"
+    json_attributes:
+      - suburb
+      - lat
+      - lng
+      - postcode
+      - name
+      - type
+      - price
+      - state
+    resource: https://projectzerothree.info/api.php?format=json
+    value_template: "{{ state_attr('sensor.qld_fuel_u91', 'name') | replace('11-Seven','Seven-11')}}  - {{ state_attr('sensor.qld_fuel_u91', 'price') }}"
+    unit_of_measurement: "¢"
+
+  - platform: rest
+    name: QLD Fuel E10
+    json_attributes_path: "*[?(@.region=='QLD')].prices[?(@.type=='E10')]"
+    json_attributes:
+      - suburb
+      - lat
+      - lng
+      - postcode
+      - name
+      - type
+      - price
+      - state
+    resource: https://projectzerothree.info/api.php?format=json
+    value_template: "{{ state_attr('sensor.qld_fuel_e10', 'name') | replace('11-Seven','Seven-11')}}  - {{ state_attr('sensor.qld_fuel_e10', 'price') }}"
+    unit_of_measurement: "¢"
+
+  - platform: rest
+    name: QLD Fuel Diesel
+    json_attributes_path: "*[?(@.region=='QLD')].prices[?(@.type=='Diesel')]"
+    json_attributes:
+      - suburb
+      - lat
+      - lng
+      - postcode
+      - name
+      - type
+      - price
+      - state
+    resource: https://projectzerothree.info/api.php?format=json
+    value_template: "{{ state_attr('sensor.qld_fuel_diesel', 'name') | replace('11-Seven','Seven-11')}}  - {{ state_attr('sensor.qld_fuel_diesel', 'price') }}"
+    unit_of_measurement: "¢"
+
+  - platform: rest
+    name: QLD Fuel LPG
+    json_attributes_path: "*[?(@.region=='QLD')].prices[?(@.type=='LPG')]"
+    json_attributes:
+      - suburb
+      - lat
+      - lng
+      - postcode
+      - name
+      - type
+      - price
+      - state
+    resource: https://projectzerothree.info/api.php?format=json
+    value_template: "{{ state_attr('sensor.qld_fuel_lpg', 'name') | replace('11-Seven','Seven-11')}}  - {{ state_attr('sensor.qld_fuel_lpg', 'price') }}"
+    unit_of_measurement: "¢"
+
+  - platform: version
+    name: H-A Current Version
+    source: local
+
+  - platform: version
+    name: H-A Latest Version
+    image: default
+    source: docker
+
+  - platform: sql
+    db_url: !secret r_db_url
+    queries:
+      - name: Recorder DB size
+        query: 'SELECT table_schema "database", Round(Sum(data_length + index_length) / POWER(1024,2), 1) "value" FROM information_schema.tables WHERE table_schema="harecorder" GROUP BY table_schema;'
+        column: 'value'
+        unit_of_measurement: Mb
+
+  # - platform: template
+  #   sensors:
+  #     avg_temp:
+  #       friendly_name: "Avg Temp"
+  #       icon_template: "mdi:thermometer-low"
+  #       unit_of_measurement: 'C'
+  #       value_template: >-
+  #         {% set avg = ((states('sensor.fig_tree_pocket_temp') | float) + (states('sensor.outside_temperature') | float)) / 2 | round(2)  %}
+  #         {{ avg }}
+
+  # - platform: min_max
+  #   name: "Avg MinMax Temp"
+  #   entity_ids:
+  #     - sensor.fig_tree_pocket_temp
+  #     - sensor.outside_temperature
+
+
+  #
+  # QNAP template GiB to Tib
+  #
+  - platform: template 
+    sensors: 
+      qnap_space_used: 
+        friendly_name: "QNAP disk utilisation"
+        unit_of_measurement: "TiB"
+        value_template: >-
+          {% set u = states('sensor.cygnus_used_space_volume_1') | float(2) | round(2) %}
+          {{(u/1024) | round(2)}}
+
+  #
+  # Total Used Storage
+  #
+  - platform: template 
+    sensors: 
+      total_disk_utilisation: 
+        friendly_name: "Used Disk"
+        unit_of_measurement: "TB"
+        value_template: >-
+          {% set total = (((states('sensor.qnap_disk_utilisation') | float(2)) / 1.1) + (states('sensor.centaurus_used_space') | float) | round(2) ) %}
+          {{(total) | round(2)}}
+        availability_template: >-
+          {{ ((states('sensor.qnap_disk_utilisation') | float(2)) + (states('sensor.centaurus_used_space') | float) | round(2)) >= 0}}
+
+  #
+  # Total Storage
+  #
+  - platform: template 
+    sensors: 
+      total_disk_storage: 
+        friendly_name: "Total disk"
+        unit_of_measurement: "TB"
+        value_template: >-
+          {{(19.2 + 5.5) | round(2)}}
+
+
+  #
+  # Zigstart device tracker (uptime)
+  #
+  - platform: template
+    sensors:
+      zigstar_up:
+        friendly_name: "Zigstar Up"
+        value_template: >-
+          {% if is_state('device_tracker.zigstargw', 'home') %} Up
+          {% else %} Down {% endif %}
+
+  # - platform: garbage_collection
+  #   name: "Schedule Christmas"
+  #   frequency: annual
+  #   date: '12/25'
+  #   icon_template: mdi:pine-tree
+  #   verbose_state: true
+  #   verbose_format: "in {days} days"
+
+  # - platform: garbage_collection
+  #   name: Schedule Green Waste
+  #   frequency: 'even-weeks'
+  #   collection_days: mon
+  #   icon_template: mdi:leaf-circle-outline
+  #   icon_tomorrow: mdi:leaf-circle
+  #   verbose_state: True
+  #   verbose_format: "in {days} days"
+
+  # - platform: garbage_collection
+  #   name: Schedule Recycle Waste
+  #   frequency: 'odd-weeks'
+  #   icon_template: mdi:recycle-variant
+  #   icon_tomorrow: mdi:recycle
+  #   collection_days: mon
+  #   verbose_state: True
+  #   # verbose_format: "on {date}, in {days} days"
+  #   verbose_format: "in {days} days"
+
+
+
+  #
+  # Original world clock display
+  #
+  # - platform: worldclock
+  #   time_zone: America/New_York
+  # - platform: worldclock
+  #   time_zone: Australia/Brisbane
+  # - platform: worldclock
+  #   time_zone: Europe/London
+  # - platform: worldclock
+  #   time_zone: Asia/Bangkok
+  # - platform: worldclock
+  #   time_zone: Asia/Manila
+
+  # - platform: template
+  #   sensors:
+  #       newyork_12hrs:
+  #           value_template: >
+  #               {% set nt = strptime(states('sensor.worldclock_sensor'), "%H:%M") %}
+  #               {{ nt.strftime("%I:%M %p") }}
+
+  #       brisbane_12hrs:
+  #           value_template: >
+  #               {% set nt = strptime(states('sensor.worldclock_sensor_2'), "%H:%M") %}
+  #               {{ nt.strftime("%I:%M %p") }}
+
+  #       london_12hrs:
+  #           value_template: >
+  #               {% set nt = strptime(states('sensor.worldclock_sensor_3'), "%H:%M") %}
+  #               {{ nt.strftime("%I:%M %p") }}
+
+  #       phuket_12hrs:
+  #           value_template: >
+  #               {% set nt = strptime(states('sensor.worldclock_sensor_4'), "%H:%M") %}
+  #               {{ nt.strftime("%I:%M %p") }}
+
+  #       manila_12hrs:
+  #           value_template: >
+  #               {% set nt = strptime(states('sensor.worldclock_sensor_5'), "%H:%M") %}
+  #               {{ nt.strftime("%I:%M %p") }}
+
+
+
+  
+
+  #
+  # The number of people at home
+  #
+  - platform: template
+    sensors:
+      people_home:
+        value_template: >
+          {{ states.person | selectattr('state', 'eq', 'home') | list | count }}
+
+

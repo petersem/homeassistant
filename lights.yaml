@@ -1,0 +1,28 @@
+#light:
+  #
+  # Group master bedroom lights
+  #
+  - platform: group
+    name: mbr 
+    entities:
+      - light.master_1
+      - light.master_2
+
+  - platform: mqtt 
+    schema: json 
+    name: master
+    command_topic: "zigbee2mqtt/bedroom_lights/set" # 
+    state_topic: "zigbee2mqtt/bedroom_lights" #  
+    color_temp: false # 
+    brightness: true 
+    rgb: false
+
+  #
+  # Group all lights
+  #
+  - platform: group
+    name: All lights
+    entities:
+      - light.kitchen
+      - light.mbr
+      - light.mood

@@ -1,0 +1,323 @@
+- id: '1635488749946'
+  alias: Dim kitchen when Roku plays Plex
+  description: ''
+  trigger:
+  - platform: device
+    device_id: 0156d3b59488af26464984e53213dda5
+    domain: media_player
+    entity_id: media_player.plex_plex_for_roku_roku_ultra_yp004n277326
+    type: playing
+    id: roku plays plex
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  condition:
+  - condition: state
+    entity_id: sun.sun
+    state: below_horizon
+  action:
+  - service: scene.turn_on
+    target:
+      entity_id: scene.tv_lights
+  mode: single
+- id: '1635489013090'
+  alias: Brighten kitchen when Roku pauses or stops Plex
+  description: ''
+  trigger:
+  - platform: device
+    device_id: 0156d3b59488af26464984e53213dda5
+    domain: media_player
+    entity_id: media_player.plex_plex_for_roku_roku_ultra_yp004n277326
+    type: turned_off
+    id: Roku off
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  - platform: device
+    device_id: 0156d3b59488af26464984e53213dda5
+    domain: media_player
+    entity_id: media_player.plex_plex_for_roku_roku_ultra_yp004n277326
+    type: paused
+    id: Roku pause
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  - platform: device
+    device_id: 0156d3b59488af26464984e53213dda5
+    domain: media_player
+    entity_id: media_player.plex_plex_for_roku_roku_ultra_yp004n277326
+    type: idle
+    id: Roku idle
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  condition:
+  - condition: state
+    entity_id: sun.sun
+    state: below_horizon
+  action:
+  - service: scene.turn_on
+    target:
+      entity_id: scene.normal_lights
+  mode: single
+- id: '1635857641627'
+  alias: Switch 1 Turn off the lights when I leave home
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.matt_petersen
+    zone: zone.home
+    event: leave
+  condition:
+  - condition: sun
+    before: sunrise
+    after: sunset
+  action:
+  - type: turn_off
+    device_id: e9abdc35380d462a53fb363177e7e95d
+    entity_id: light.hue_colour_lamp_1
+    domain: light
+  - type: turn_off
+    device_id: 966e58820dfa8de085788fee6093c500
+    entity_id: light.hue_color_lamp_2
+    domain: light
+  - type: turn_off
+    device_id: 1c4f343dda0c3279c2c0457a07fba067
+    entity_id: light.hue_color_lamp_3
+    domain: light
+  - type: turn_off
+    device_id: 1594ced670a27244e8e44b420ce07f4d
+    entity_id: light.master_1
+    domain: light
+  - type: turn_off
+    device_id: dd29ac64950ccd94963f4324ca31ed0d
+    entity_id: light.master_2
+    domain: light
+  - type: turn_off
+    device_id: b38d5628fa4c22a8d0814ac6b8b8e0ea
+    entity_id: light.mood
+    domain: light
+  mode: single
+- id: '1635857890124'
+  alias: 'Turn on the lights when I get home '
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.matt_petersen
+    zone: zone.home
+    event: enter
+  condition:
+  - condition: sun
+    before: sunrise
+    after: sunset
+  action:
+  - type: turn_on
+    device_id: e9abdc35380d462a53fb363177e7e95d
+    entity_id: light.hue_colour_lamp_1
+    domain: light
+    brightness_pct: 100
+  - type: turn_on
+    device_id: 966e58820dfa8de085788fee6093c500
+    entity_id: light.hue_color_lamp_2
+    domain: light
+    brightness_pct: 100
+  - type: turn_on
+    device_id: 1c4f343dda0c3279c2c0457a07fba067
+    entity_id: light.hue_color_lamp_3
+    domain: light
+    brightness_pct: 100
+  mode: single
+- id: '1636931873459'
+  alias: Message when matt home
+  description: send a telegram message when someone enters geofence for home
+  trigger:
+  - platform: zone
+    entity_id: person.matt_petersen
+    zone: zone.home
+    event: enter
+    id: '1'
+  condition: []
+  action:
+  - service: telegram_bot.send_message
+    data:
+      message: Matt just got home
+      title: Arrived home
+  mode: single
+- id: '1639543929063'
+  alias: ooo-la-la
+  description: ''
+  trigger:
+  - platform: event
+    event_type: ''
+  condition: []
+  action:
+  - scene: scene.kitchen_ooh_la_la
+  - type: turn_off
+    device_id: 1594ced670a27244e8e44b420ce07f4d
+    entity_id: light.master_1
+    domain: light
+  mode: single
+- id: '1642252242991'
+  alias: Basic switch test
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: e7be9b9fcb940cba3f50b066da8f878a
+    type: action
+    subtype: 'on'
+    discovery_id: 0x8cf681fffe48be79 action_on
+    id: switch_on
+  - platform: device
+    domain: mqtt
+    device_id: e7be9b9fcb940cba3f50b066da8f878a
+    type: action
+    subtype: 'off'
+    discovery_id: 0x8cf681fffe48be79 action_off
+    id: switch_off
+  condition:
+  - condition: trigger
+    id: switch_off
+  action:
+  - type: turn_off
+    device_id: b66ded52c2077db11a4a2f57a89ca5ff
+    entity_id: light.kitchen_lights
+    domain: light
+  mode: single
+- id: '1642253769934'
+  alias: Toggle bedroom lights
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: e7be9b9fcb940cba3f50b066da8f878a
+    type: action
+    subtype: 'on'
+    discovery_id: 0x8cf681fffe48be79 action_on
+    id: ms_1
+  condition: []
+  action:
+  - type: toggle
+    device_id: 8937f8ddb86a0ee69ebaf4f4d0c16409
+    entity_id: light.bedroom_lights
+    domain: light
+  mode: single
+- id: '1642253897406'
+  alias: Switch 1 Toggle All Lights
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: e7be9b9fcb940cba3f50b066da8f878a
+    type: action
+    subtype: 'off'
+    discovery_id: 0x8cf681fffe48be79 action_off
+    id: ms_1
+  condition: []
+  action:
+  - type: toggle
+    device_id: efb8e6b4a5858da13eecf853a1445d4a
+    entity_id: light.all_lights_2
+    domain: light
+  mode: single
+- id: '1642254159854'
+  alias: Switch 1 Brighten bedroom
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: e7be9b9fcb940cba3f50b066da8f878a
+    type: action
+    subtype: brightness_move_up
+    discovery_id: 0x8cf681fffe48be79 action_brightness_move_up
+    id: sw_1
+  condition: []
+  action:
+  - device_id: 8937f8ddb86a0ee69ebaf4f4d0c16409
+    domain: light
+    entity_id: light.bedroom_lights
+    type: brightness_increase
+  mode: single
+- id: '1642254273054'
+  alias: 'Switch 1 Dim bedroom '
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: e7be9b9fcb940cba3f50b066da8f878a
+    type: action
+    subtype: brightness_move_down
+    discovery_id: 0x8cf681fffe48be79 action_brightness_move_down
+    id: sw_1
+  condition: []
+  action:
+  - device_id: 8937f8ddb86a0ee69ebaf4f4d0c16409
+    domain: light
+    entity_id: light.bedroom_lights
+    type: brightness_decrease
+  mode: single
+- id: '1642985788012'
+  alias: Housekeeping Job
+  description: Purge all recorder history older than last 7 days, and restart home
+    assistant
+  trigger:
+  - platform: time
+    id: daily_housekeeping
+    at: 02:00
+  condition: []
+  action:
+  - service: recorder.purge
+    data:
+      keep_days: 7
+      repack: true
+  - service: homeassistant.restart
+  mode: single
+- id: '1643033279656'
+  alias: Weekly Pocket Money
+  description: pay kids $10, providing PM is not suspended
+  trigger:
+  - platform: time
+    at: input_datetime.monday_mornings
+  condition: []
+  action:
+  - service: script.script_pocketmoney_increment
+    data:
+      pocketmoney_payee: dan
+  - service: script.script_pocketmoney_increment
+    data:
+      pocketmoney_payee: laura
+  - service: input_datetime.set_datetime
+    target:
+      entity_id: input_datetime.monday_mornings
+    data:
+      time: 07:00:00
+      date: '{{ (now().timestamp() + ((7 - now().weekday()) *86400)) | int | timestamp_custom("%Y-%m-%d")
+        }}'
+  - service: telegram_bot.send_message
+    data:
+      title: <h2>Pocket Money Processed</h2>
+      target: -418902609
+      message: '<b>Laura:</b> ${{ states(''counter.pocketmoney_laura'') }} (Active:
+        {{ states(''input_boolean.pocketmoney_laura_active'') }})
+
+        <b>Dan:</b> ${{ states(''counter.pocketmoney_dan'') }} (Active: {{ states(''input_boolean.pocketmoney_dan_active'')
+        }})
+
+        <b>Next due:</b> {{ states(''input_datetime.monday_mornings'') }} '
+      parse_mode: html
+  mode: single
+- id: '1643732091824'
+  alias: kitchen lights
+  description: ''
+  use_blueprint:
+    path: EPMatt/light.yaml
+    input:
+      light_color_mode: Auto
+      light: light.lightmaster_2
+      controller_entity: sensor.ikea_5_button_living_action
+      controller_model: IKEA E1524/E1810 TRÅDFRI Wireless 5-Button Remote
+      controller_device: 7b4dac197b6992256c6b0642f68ba3cc
