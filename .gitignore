@@ -17,4 +17,6 @@ www/community/
 www/hacs-files
 www/upcoming-media-card-images
 zigbee.db
-/home-assist.log.*
+home-assistant.log
+home-assistant.log.1
+home-assistant.log.fault
