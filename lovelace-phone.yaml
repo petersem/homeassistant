@@ -54,7 +54,7 @@ views:
                 tap_action:
                   action: toggle
                 theme: kibibit-dark-cards
-                entity: light.mood
+                entity: light.hue_mood
                 show_state: false
                 icon: mdi:dome-light
                 name: Mood
