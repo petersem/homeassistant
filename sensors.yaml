@@ -317,7 +317,7 @@
         icon_template: "mdi:thermometer-low"
         unit_of_measurement: '°C'
         value_template: >-
-          {{ state_attr('sensor.ow_temperature', 'temperature') }}
+          {{ state_attr('sensor.esp_temperature', 'temperature') }}
 
   - platform: scrape
     name: QLD Covid Active Cases - Total
@@ -383,7 +383,7 @@
       - price
       - state
     resource: https://projectzerothree.info/api.php?format=json
-    value_template: "{{ state_attr('sensor.qld_fuel_u98', 'name') | replace('11-Seven','Seven-11')}}  - {{ state_attr('sensor.qld_fuel_u98', 'price') }}"
+    value_template: "{{ state_attr('sensor.qld_fuel_u98', 'name') | replace('11-Seven','7-11')}}  - {{ state_attr('sensor.qld_fuel_u98', 'price') }}"
     unit_of_measurement: "¢"
 
   - platform: rest
@@ -399,7 +399,7 @@
       - price
       - state
     resource: https://projectzerothree.info/api.php?format=json
-    value_template: "{{ state_attr('sensor.qld_fuel_u95', 'name') | replace('11-Seven','Seven-11')}}  - {{ state_attr('sensor.qld_fuel_u95', 'price') }}"
+    value_template: "{{ state_attr('sensor.qld_fuel_u95', 'name') | replace('11-Seven','7-11')}}  - {{ state_attr('sensor.qld_fuel_u95', 'price') }}"
     unit_of_measurement: "¢"
 
   - platform: rest
@@ -415,7 +415,7 @@
       - price
       - state
     resource: https://projectzerothree.info/api.php?format=json
-    value_template: "{{ state_attr('sensor.qld_fuel_u91', 'name') | replace('11-Seven','Seven-11')}}  - {{ state_attr('sensor.qld_fuel_u91', 'price') }}"
+    value_template: "{{ state_attr('sensor.qld_fuel_u91', 'name') | replace('11-Seven','7-11')}}  - {{ state_attr('sensor.qld_fuel_u91', 'price') }}"
     unit_of_measurement: "¢"
 
   - platform: rest
@@ -431,7 +431,7 @@
       - price
       - state
     resource: https://projectzerothree.info/api.php?format=json
-    value_template: "{{ state_attr('sensor.qld_fuel_e10', 'name') | replace('11-Seven','Seven-11')}}  - {{ state_attr('sensor.qld_fuel_e10', 'price') }}"
+    value_template: "{{ state_attr('sensor.qld_fuel_e10', 'name') | replace('11-Seven','7-11')}}  - {{ state_attr('sensor.qld_fuel_e10', 'price') }}"
     unit_of_measurement: "¢"
 
   - platform: rest
@@ -447,7 +447,7 @@
       - price
       - state
     resource: https://projectzerothree.info/api.php?format=json
-    value_template: "{{ state_attr('sensor.qld_fuel_diesel', 'name') | replace('11-Seven','Seven-11')}}  - {{ state_attr('sensor.qld_fuel_diesel', 'price') }}"
+    value_template: "{{ state_attr('sensor.qld_fuel_diesel', 'name') | replace('11-Seven','7-11')}}  - {{ state_attr('sensor.qld_fuel_diesel', 'price') }}"
     unit_of_measurement: "¢"
 
   - platform: rest
@@ -463,7 +463,7 @@
       - price
       - state
     resource: https://projectzerothree.info/api.php?format=json
-    value_template: "{{ state_attr('sensor.qld_fuel_lpg', 'name') | replace('11-Seven','Seven-11')}}  - {{ state_attr('sensor.qld_fuel_lpg', 'price') }}"
+    value_template: "{{ state_attr('sensor.qld_fuel_lpg', 'name') | replace('11-Seven','7-11')}}  - {{ state_attr('sensor.qld_fuel_lpg', 'price') }}"
     unit_of_measurement: "¢"
 
   - platform: version

@@ -43,7 +43,7 @@ views:
                       - type: button
                         tap_action:
                           action: toggle
-                        entity: light.mood
+                        entity: light.hue_mood
                         show_state: false
                         icon: mdi:dome-light
                         name: Mood
@@ -2054,88 +2054,102 @@ views:
     cards:
       - type: vertical-stack
         cards:
-          - type: horizontal-stack
+          - type: vertical-stack
             cards:
-              - type: vertical-stack
+              - type: horizontal-stack
                 cards:
-                  - type: custom:stack-in-card
-                    mode: vertical
-                    theme: ios-dark-mode
+                  - type: vertical-stack
                     cards:
-                      - type: entity
-                        entity: counter.pocketmoney_dan
-                        name: Dan Pocket Money
-                        unit: $
-                        icon: mdi:face-man-outline
-                        theme: ios-dark-mode
                       - type: horizontal-stack
                         cards:
-                          - type: button
-                            tap_action:
-                              action: toggle
-                            entity: input_boolean.pocketmoney_dan_active
-                            show_name: false
+                          - type: custom:stack-in-card
+                            mode: vertical
                             theme: ios-dark-mode
-                            icon: mdi:alarm-light
-                          - type: button
-                            tap_action:
-                              action: call-service
-                              service: script.script_pocketmoney_increment
-                              service_data:
-                                pocketmoney_payee: dan
-                              target: {}
-                            show_icon: false
-                            name: Add
+                            cards:
+                              - type: entity
+                                entity: counter.pocketmoney_dan
+                                name: Dan Pocket Money
+                                unit: $
+                                icon: mdi:face-man-outline
+                                theme: ios-dark-mode
+                              - type: horizontal-stack
+                                cards:
+                                  - type: button
+                                    tap_action:
+                                      action: toggle
+                                    entity: input_boolean.pocketmoney_dan_active
+                                    show_name: false
+                                    theme: ios-dark-mode
+                                    icon: mdi:alarm-light
+                                  - type: button
+                                    tap_action:
+                                      action: call-service
+                                      service: script.script_pocketmoney_increment
+                                      service_data:
+                                        pocketmoney_payee: dan
+                                      target: {}
+                                    show_icon: false
+                                    name: Add
+                                    theme: ios-dark-mode
+                                  - type: button
+                                    tap_action:
+                                      action: call-service
+                                      service: script.pocket_money_decrement
+                                      service_data:
+                                        pocketmoney_payee: dan
+                                      target: {}
+                                    show_icon: false
+                                    name: Take
+                                    theme: ios-dark-mode
+                          - type: custom:stack-in-card
+                            mode: vertical
                             theme: ios-dark-mode
-                          - type: button
-                            tap_action:
-                              action: call-service
-                              service: script.pocket_money_decrement
-                              service_data:
-                                pocketmoney_payee: dan
-                              target: {}
-                            show_icon: false
-                            name: Take
-                            theme: ios-dark-mode
-                  - type: custom:stack-in-card
-                    mode: vertical
-                    theme: ios-dark-mode
-                    cards:
-                      - type: entity
-                        entity: counter.pocketmoney_laura
-                        name: Laura Pocket Money
-                        unit: $
-                        icon: mdi:face-woman-outline
+                            cards:
+                              - type: entity
+                                entity: counter.pocketmoney_laura
+                                name: Laura Pocket Money
+                                unit: $
+                                icon: mdi:face-woman-outline
+                                theme: ios-dark-mode
+                              - type: horizontal-stack
+                                cards:
+                                  - type: button
+                                    tap_action:
+                                      action: toggle
+                                    entity: input_boolean.pocketmoney_laura_active
+                                    show_name: false
+                                    theme: ios-dark-mode
+                                    icon: mdi:alarm-light
+                                  - type: button
+                                    tap_action:
+                                      action: call-service
+                                      service: script.script_pocketmoney_increment
+                                      service_data:
+                                        pocketmoney_payee: laura
+                                      target: {}
+                                    show_icon: false
+                                    name: Add
+                                    theme: ios-dark-mode
+                                  - type: button
+                                    tap_action:
+                                      action: call-service
+                                      service: script.pocket_money_decrement
+                                      service_data:
+                                        pocketmoney_payee: laura
+                                      target: {}
+                                    show_icon: false
+                                    name: Take
+                                    theme: ios-dark-mode
+                      - type: entities
+                        title: Smoking
                         theme: ios-dark-mode
-                      - type: horizontal-stack
-                        cards:
-                          - type: button
-                            tap_action:
-                              action: toggle
-                            entity: input_boolean.pocketmoney_laura_active
-                            show_name: false
-                            theme: ios-dark-mode
-                            icon: mdi:alarm-light
-                          - type: button
-                            tap_action:
-                              action: call-service
-                              service: script.script_pocketmoney_increment
-                              service_data:
-                                pocketmoney_payee: laura
-                              target: {}
-                            show_icon: false
-                            name: Add
-                            theme: ios-dark-mode
-                          - type: button
-                            tap_action:
-                              action: call-service
-                              service: script.pocket_money_decrement
-                              service_data:
-                                pocketmoney_payee: laura
-                              target: {}
-                            show_icon: false
-                            name: Take
-                            theme: ios-dark-mode
+                        entities:
+                          - entity: sensor.mp_not_smoking_days
+                            name: Days not smoking
+                            icon: mdi:smoke
+                          - entity: sensor.mp_money_saved
+                            name: Total saved
+                            icon: mdi:emoticon-cool-outline
                   - type: entities
                     theme: ios-dark-mode
                     title: Broadband
@@ -2145,22 +2159,6 @@ views:
                       - entity: sensor.nbn_data_used
                       - entity: sensor.nbn_downloaded
                       - entity: sensor.nbn_uploaded
-              - type: vertical-stack
-                cards:
-                  - type: entities
-                    title: Smoking
-                    theme: ios-dark-mode
-                    entities:
-                      - entity: sensor.mp_not_smoking_days
-                        name: Days not smoking
-                        icon: mdi:smoke
-                      - entity: sensor.mp_money_saved
-                        name: Total saved
-                        icon: mdi:emoticon-cool-outline
-                  - type: entities
-                    theme: ios-dark-mode
-                    entities:
-                      - entity: sensor.local_ip
                   - type: entities
                     theme: ios-dark-mode
                     title: Home Assistant
@@ -2171,58 +2169,122 @@ views:
                       - entity: sensor.hacs
                       - type: attribute
                         entity: sensor.hacs
+                        name: ' '
                         attribute: repositories
-              - type: vertical-stack
+              - type: horizontal-stack
                 cards:
-                  - type: custom:apexcharts-card
-                    header:
-                      show: true
-                      title: Github Posterr
-                      show_states: true
-                      colorize_states: true
-                    series:
-                      - entity: sensor.petersem_posterr_issues
-                        type: line
-                        color: red
-                        name: ' '
-                      - entity: sensor.petersem_posterr_stars
-                        type: line
-                        color: yellow
-                        name: ' '
-                      - entity: sensor.petersem_posterr_watchers
-                        type: line
-                        color: green
-                        name: ' '
-                  - type: custom:apexcharts-card
-                    header:
-                      show: true
-                      title: Github Dockerholics
-                      show_states: true
-                      colorize_states: true
-                    series:
-                      - entity: sensor.petersem_dockerholics_issues
-                        type: line
-                        color: red
-                        name: ' '
-                      - entity: sensor.petersem_dockerholics_stars
-                        type: line
-                        color: yellow
-                        name: ' '
-                      - entity: sensor.petersem_dockerholics_watchers
-                        type: line
-                        color: green
-                        name: ' '
+                  - type: entities
+                    theme: ios-dark-mode
+                    entities:
+                      - entity: sensor.local_ip
+              - type: horizontal-stack
+                cards:
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:apexcharts-card
+                        header:
+                          show: true
+                          title: Github Dockerholics
+                          show_states: true
+                          colorize_states: true
+                        series:
+                          - entity: sensor.petersem_dockerholics_issues
+                            type: line
+                            color: red
+                            name: ' '
+                          - entity: sensor.petersem_dockerholics_stars
+                            type: line
+                            color: yellow
+                            name: ' '
+                          - entity: sensor.petersem_dockerholics_watchers
+                            type: line
+                            color: green
+                            name: ' '
+                  - type: vertical-stack
+                    cards:
+                      - type: custom:apexcharts-card
+                        header:
+                          show: true
+                          title: Github Posterr
+                          show_states: true
+                          colorize_states: true
+                        series:
+                          - entity: sensor.petersem_posterr_issues
+                            type: line
+                            color: red
+                            name: ' '
+                          - entity: sensor.petersem_posterr_stars
+                            type: line
+                            color: yellow
+                            name: ' '
+                          - entity: sensor.petersem_posterr_watchers
+                            type: line
+                            color: green
+                            name: ' '
+                  - type: vertical-stack
+                    cards:
+                      - type: custom:apexcharts-card
+                        header:
+                          show: true
+                          title: Github Monocker
+                          show_states: true
+                          colorize_states: true
+                        series:
+                          - entity: sensor.petersem_monocker_issues
+                            type: line
+                            color: red
+                            name: ' '
+                          - entity: sensor.petersem_monocker_stars
+                            type: line
+                            color: yellow
+                            name: ' '
+                          - entity: sensor.petersem_monocker_watchers
+                            type: line
+                            color: green
+                            name: ' '
+                  - type: vertical-stack
+                    cards:
+                      - type: custom:apexcharts-card
+                        header:
+                          show: true
+                          title: Github Exportarr
+                          show_states: true
+                          colorize_states: true
+                        series:
+                          - entity: sensor.petersem_exportarr_issues
+                            type: line
+                            color: red
+                            name: ' '
+                          - entity: sensor.petersem_exportarr_stars
+                            type: line
+                            color: yellow
+                            name: ' '
+                          - entity: sensor.petersem_exportarr_watchers
+                            type: line
+                            color: green
+                            name: ' '
+                  - type: vertical-stack
+                    cards:
+                      - type: custom:apexcharts-card
+                        header:
+                          show: true
+                          title: Github Home Assistant
+                          show_states: true
+                          colorize_states: true
+                        series:
+                          - entity: sensor.petersem_homeassistant_issues
+                            type: line
+                            color: red
+                            name: ' '
+                          - entity: sensor.petersem_homeassistant_stars
+                            type: line
+                            color: yellow
+                            name: ' '
+                          - entity: sensor.petersem_homeassistant_watchers
+                            type: line
+                            color: green
+                            name: ' '
             theme: ios-dark-mode
-  - title: Dan
-    path: dan
-    icon: mdi:face-man-outline
-    badges: []
-    cards: []
-  - title: Laura
-    path: laura
-    icon: mdi:face-woman-outline
-    badges: []
-    cards: []
   - title: Media
     path: media
     icon: mdi:movie-open-play
@@ -2309,3 +2371,51 @@ views:
             entity: sensor.qld_covid_deaths_today
             icon: mdi:skull-scan
             icon_color: grey
+      - type: custom:slider-button-card
+        entity: light.kitchen_lights
+        slider:
+          direction: left-right
+          background: gradient
+          use_state_color: true
+          force_square: true
+          use_percentage_bg_opacity: false
+        icon:
+          tap_action:
+            action: more-info
+          use_state_color: true
+        action_button:
+          mode: toggle
+      - type: custom:stack-in-card
+        mode: vertical
+        theme: ios-dark-mode
+        cards:
+          - type: custom:button-card
+            color_type: label-card
+            color: rgb(27, 24, 24)
+            name: Queensland Covid
+            theme: ios-dark-mode
+            styles: null
+            card:
+              - height: 15px
+          - type: custom:mushroom-chips-card
+            chips:
+              - type: entity
+                theme: ios-dark-mode
+                entity: sensor.qld_covid_active_cases_total
+                icon: mdi:virus-outline
+                icon_color: red
+              - type: entity
+                theme: ios-dark-mode
+                entity: sensor.qld_covid_cases_today
+                icon_color: orange
+                icon: mdi:account-group-outline
+              - type: entity
+                theme: ios-dark-mode
+                entity: sensor.qld_covid_active_cases_change_today
+                icon_color: blue
+                icon: mdi:account-group-outline
+              - type: entity
+                entity: sensor.qld_covid_deaths_today
+                theme: ios-dark-mode
+                icon: mdi:skull-scan
+                icon_color: grey
