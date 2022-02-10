@@ -2045,9 +2045,9 @@ views:
                         line_color: var(--accent-color)
                         line_width: 8
                         font_size: 75
-  - title: Matt
+  - title: Admin
     icon: mdi:alien-outline
-    path: matt
+    path: admin
     theme: ios-dark-mode
     type: panel
     badges: []
