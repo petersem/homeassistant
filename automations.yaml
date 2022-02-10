@@ -321,3 +321,14 @@
       controller_entity: sensor.ikea_5_button_living_action
       controller_model: IKEA E1524/E1810 TRÅDFRI Wireless 5-Button Remote
       controller_device: 7b4dac197b6992256c6b0642f68ba3cc
+- id: '1644291880377'
+  alias: leaving home
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.people_home
+    to: '0'
+  condition: []
+  action:
+  - scene: scene.all_off
+  mode: single

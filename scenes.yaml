@@ -288,3 +288,15 @@
       mode: auto
       friendly_name: Patio Treble
       state: '0'
+- id: '1644292012315'
+  name: all off
+  entities:
+    light.all_lights_2:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      friendly_name: all_lights
+      supported_features: 59
+      state: 'off'
