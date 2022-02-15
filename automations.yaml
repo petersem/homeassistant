@@ -1,5 +1,5 @@
 - id: '1635488749946'
-  alias: Dim kitchen when Roku plays Plex
+  alias: Lights dim kitchen when Roku plays Plex
   description: ''
   trigger:
   - platform: device
@@ -20,9 +20,10 @@
   - service: scene.turn_on
     target:
       entity_id: scene.tv_lights
+    data: {}
   mode: single
 - id: '1635489013090'
-  alias: Brighten kitchen when Roku pauses or stops Plex
+  alias: Lights brighten kitchen when Roku pauses or stops Plex
   description: ''
   trigger:
   - platform: device
@@ -63,47 +64,10 @@
   - service: scene.turn_on
     target:
       entity_id: scene.normal_lights
-  mode: single
-- id: '1635857641627'
-  alias: Switch 1 Turn off the lights when I leave home
-  description: ''
-  trigger:
-  - platform: zone
-    entity_id: person.matt_petersen
-    zone: zone.home
-    event: leave
-  condition:
-  - condition: sun
-    before: sunrise
-    after: sunset
-  action:
-  - type: turn_off
-    device_id: e9abdc35380d462a53fb363177e7e95d
-    entity_id: light.hue_colour_lamp_1
-    domain: light
-  - type: turn_off
-    device_id: 966e58820dfa8de085788fee6093c500
-    entity_id: light.hue_color_lamp_2
-    domain: light
-  - type: turn_off
-    device_id: 1c4f343dda0c3279c2c0457a07fba067
-    entity_id: light.hue_color_lamp_3
-    domain: light
-  - type: turn_off
-    device_id: 1594ced670a27244e8e44b420ce07f4d
-    entity_id: light.master_1
-    domain: light
-  - type: turn_off
-    device_id: dd29ac64950ccd94963f4324ca31ed0d
-    entity_id: light.master_2
-    domain: light
-  - type: turn_off
-    device_id: b38d5628fa4c22a8d0814ac6b8b8e0ea
-    entity_id: light.mood
-    domain: light
+    data: {}
   mode: single
 - id: '1635857890124'
-  alias: 'Turn on the lights when I get home '
+  alias: 'Lights Turn on the lights when I get home '
   description: ''
   trigger:
   - platform: zone
@@ -132,7 +96,7 @@
     brightness_pct: 100
   mode: single
 - id: '1636931873459'
-  alias: Message when matt home
+  alias: Notify when matt home
   description: send a telegram message when someone enters geofence for home
   trigger:
   - platform: zone
@@ -147,49 +111,8 @@
       message: Matt just got home
       title: Arrived home
   mode: single
-- id: '1639543929063'
-  alias: ooo-la-la
-  description: ''
-  trigger:
-  - platform: event
-    event_type: ''
-  condition: []
-  action:
-  - scene: scene.kitchen_ooh_la_la
-  - type: turn_off
-    device_id: 1594ced670a27244e8e44b420ce07f4d
-    entity_id: light.master_1
-    domain: light
-  mode: single
-- id: '1642252242991'
-  alias: Basic switch test
-  description: ''
-  trigger:
-  - platform: device
-    domain: mqtt
-    device_id: e7be9b9fcb940cba3f50b066da8f878a
-    type: action
-    subtype: 'on'
-    discovery_id: 0x8cf681fffe48be79 action_on
-    id: switch_on
-  - platform: device
-    domain: mqtt
-    device_id: e7be9b9fcb940cba3f50b066da8f878a
-    type: action
-    subtype: 'off'
-    discovery_id: 0x8cf681fffe48be79 action_off
-    id: switch_off
-  condition:
-  - condition: trigger
-    id: switch_off
-  action:
-  - type: turn_off
-    device_id: b66ded52c2077db11a4a2f57a89ca5ff
-    entity_id: light.kitchen_lights
-    domain: light
-  mode: single
 - id: '1642253769934'
-  alias: Toggle bedroom lights
+  alias: Lights Switch MBR Toggle
   description: ''
   trigger:
   - platform: device
@@ -207,7 +130,7 @@
     domain: light
   mode: single
 - id: '1642253897406'
-  alias: Switch 1 Toggle All Lights
+  alias: Lights Switch MBR Toggle All
   description: ''
   trigger:
   - platform: device
@@ -225,7 +148,7 @@
     domain: light
   mode: single
 - id: '1642254159854'
-  alias: Switch 1 Brighten bedroom
+  alias: Lights Switch MBR Brighten
   description: ''
   trigger:
   - platform: device
@@ -243,7 +166,7 @@
     type: brightness_increase
   mode: single
 - id: '1642254273054'
-  alias: 'Switch 1 Dim bedroom '
+  alias: Lights Switch MBR Dim
   description: ''
   trigger:
   - platform: device
@@ -261,7 +184,7 @@
     type: brightness_decrease
   mode: single
 - id: '1642985788012'
-  alias: Housekeeping Job
+  alias: Housekeeping purge recorder db
   description: Purge all recorder history older than last 7 days, and restart home
     assistant
   trigger:
@@ -275,9 +198,10 @@
       keep_days: 7
       repack: true
   - service: homeassistant.restart
+    data: {}
   mode: single
 - id: '1643033279656'
-  alias: Weekly Pocket Money
+  alias: Housekeeping Weekly Pocket Money
   description: pay kids $10, providing PM is not suspended
   trigger:
   - platform: time
@@ -310,19 +234,8 @@
         <b>Next due:</b> {{ states(''input_datetime.monday_mornings'') }} '
       parse_mode: html
   mode: single
-- id: '1643732091824'
-  alias: kitchen lights
-  description: ''
-  use_blueprint:
-    path: EPMatt/light.yaml
-    input:
-      light_color_mode: Auto
-      light: light.lightmaster_2
-      controller_entity: sensor.ikea_5_button_living_action
-      controller_model: IKEA E1524/E1810 TRÅDFRI Wireless 5-Button Remote
-      controller_device: 7b4dac197b6992256c6b0642f68ba3cc
 - id: '1644291880377'
-  alias: leaving home
+  alias: Notify when Dan leaving home
   description: ''
   trigger:
   - platform: state
@@ -332,3 +245,70 @@
   action:
   - scene: scene.all_off
   mode: single
+- id: '1644608882905'
+  alias: HadesPC Switch Portable PC Rickroll joke
+  description: Rickroll button :)
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: bb79ca7b53dce058399377781a4dd675
+    type: action
+    subtype: 'on'
+    discovery_id: 0x0c4314fffeb0734e action_on
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: iotlink/workgroup/haydescanyon/commands/run
+      payload: '{ "command": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+        "args": "https://www.youtube.com/watch?v=oHg5SJYRHA0", "path": "C:\\Program
+        Files (x86)\\Google\\Chrome\\Application", "user": "", "visible": true, "fallback":
+        true }'
+  - service: mqtt.publish
+    data:
+      topic: iotlink/workgroup/haydescanyon/commands/notify
+      payload: '{ "title": "HAHA!! :)", "message": "Loooooooooser!!!", "iconUrl":
+        "", "launchParams": "" }'
+  mode: single
+- id: '1644614058509'
+  alias: HadesPC Switch portable Lock computer
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: bb79ca7b53dce058399377781a4dd675
+    type: action
+    subtype: 'off'
+    discovery_id: 0x0c4314fffeb0734e action_off
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: iotlink/workgroup/haydescanyon/commands/lock
+  mode: single
+- id: '1644773366189'
+  alias: test send notifification
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_boolean.trst_toggle
+  condition: []
+  action:
+  - service: light.toggle
+    data: {}
+    target:
+      device_id: ee713bfc1a6e3b92dcadff4a81f0b208
+  mode: single
+- id: '1644778728335'
+  alias: Notify Check batteries < 20%
+  description: ''
+  use_blueprint:
+    path: Sbyx/low-battery-level-detection-notification-for-all-battery-sensors.yaml
+    input:
+      time: '19:00:00'
+      actions:
+      - service: telegram_bot.send_message
+        data:
+          title: Warning
+          message: Low batteries for {{sensors}}
+      threshold: 20

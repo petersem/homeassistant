@@ -1,5 +1,5 @@
 esphome:
-  name: test
+  name: outside_temp
 
 esp32:
   board: esp32dev
@@ -19,6 +19,12 @@ ota:
 wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
+  
+  # Optional manual IP
+  manual_ip:
+    static_ip: 192.168.1.113
+    gateway: 192.168.1.1
+    subnet: 255.255.255.0
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:

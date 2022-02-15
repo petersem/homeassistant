@@ -371,6 +371,18 @@
     select: ".DAILY-CASES tr:nth-child(2) .COL1.DATE"
 
   - platform: rest
+    name: Docker Compose
+    json_attributes_path: "$.[:0].tag_name"
+    json_attributes:
+      - name
+      - tag_name
+      - published_at
+    resource: https://api.github.com/repos/docker/compose/releases/latest
+    value_template: "{{ state_attr('sensor.docker_compose', 'tag_name') }}"
+
+
+
+  - platform: rest
     name: QLD Fuel U98
     json_attributes_path: "*[?(@.region=='QLD')].prices[?(@.type=='U98')]"
     json_attributes:

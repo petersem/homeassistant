@@ -20,3 +20,5 @@ zigbee.db
 home-assistant.log
 home-assistant.log.1
 home-assistant.log.fault
+id_rsa
+id_rsa.pub
