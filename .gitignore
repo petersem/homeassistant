@@ -12,6 +12,8 @@ deps/
 image/
 themes/
 tts/
+ssh/
+netdaemon/
 www/@eaDir/
 www/community/
 www/hacs-files
@@ -22,3 +24,4 @@ home-assistant.log.1
 home-assistant.log.fault
 id_rsa
 id_rsa.pub
+.shopping_list.json
